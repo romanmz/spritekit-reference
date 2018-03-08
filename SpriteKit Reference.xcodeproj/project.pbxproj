@@ -14,6 +14,7 @@
 		3027A51A204E9DE200BBF74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3027A518204E9DE200BBF74D /* LaunchScreen.storyboard */; };
 		3027A525204E9F1300BBF74D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A524204E9F1300BBF74D /* GameScene.swift */; };
 		3027A527204EAB1200BBF74D /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A526204EAB1200BBF74D /* SettingsScene.swift */; };
+		3027A5A5205006A600BBF74D /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A5A4205006A600BBF74D /* SKView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3027A51B204E9DE200BBF74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3027A524204E9F1300BBF74D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		3027A526204EAB1200BBF74D /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		3027A5A4205006A600BBF74D /* SKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3027A523204E9EF800BBF74D /* GameScenes */,
 				3027A50F204E9DE200BBF74D /* AppDelegate.swift */,
 				3027A511204E9DE200BBF74D /* ViewController.swift */,
+				3027A5A4205006A600BBF74D /* SKView.swift */,
 				3027A513204E9DE200BBF74D /* Main.storyboard */,
 				3027A518204E9DE200BBF74D /* LaunchScreen.storyboard */,
 			);
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3027A5A5205006A600BBF74D /* SKView.swift in Sources */,
 				3027A512204E9DE200BBF74D /* ViewController.swift in Sources */,
 				3027A525204E9F1300BBF74D /* GameScene.swift in Sources */,
 				3027A527204EAB1200BBF74D /* SettingsScene.swift in Sources */,
