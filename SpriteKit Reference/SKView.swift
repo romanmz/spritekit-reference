@@ -9,19 +9,19 @@
 import UIKit
 import SpriteKit
 
-class GameView: SKView, SKViewDelegate {
+class MySKView: SKView, SKViewDelegate {
 	
 	// [custom properties]
-	var gameScene: GameScene!
-	var settingsScene: SettingsScene!
+	var scene1: MySKScene!
+	var scene2: AnotherSKScene!
 	var sceneTransition: SKTransition!
 	
 	// Initialize
 	override func didMoveToWindow() {
 		
 		// [custom properties]
-		gameScene = GameScene(size: bounds.size)
-		settingsScene = SettingsScene(size: bounds.size)
+		scene1 = MySKScene(size: bounds.size)
+		scene2 = AnotherSKScene(size: bounds.size)
 		sceneTransition = SKTransition.flipHorizontal(withDuration: 0.5)
 		
 		
@@ -50,8 +50,8 @@ class GameView: SKView, SKViewDelegate {
 		// ------------------------------
 		// the origin point on views is on the top left, on scenes is on the bottom left
 		let testPoint = CGPoint(x: 10, y: 10)
-		convert(testPoint, to: gameScene)	// converts a point in the view into a point in the scene
-		convert(testPoint, from: gameScene) // vice versa
+		convert(testPoint, to: scene1)	// converts a point in the view into a point in the scene
+		convert(testPoint, from: scene1) // vice versa
 		
 		
 		// Getting rendered nodes as SKTexture's
@@ -67,7 +67,7 @@ class GameView: SKView, SKViewDelegate {
 	}
 	
 	
-	// SKViewDelegate methods
+	// Pr - SKViewDelegate methods
 	// ------------------------------
 	func view(_ view: SKView, shouldRenderAtTime time: TimeInterval) -> Bool {
 		return true
@@ -77,13 +77,13 @@ class GameView: SKView, SKViewDelegate {
 	// Presenting scenes
 	// ------------------------------
 	func presentGame() {
-		presentScene(gameScene, transition: sceneTransition)
+		presentScene(scene1, transition: sceneTransition)
 	}
 	func presentSettings() {
-		presentScene(settingsScene, transition: sceneTransition)
+		presentScene(scene2, transition: sceneTransition)
 	}
 	func toggleScene() {
-		if scene is GameScene {
+		if scene is MySKScene {
 			presentSettings()
 		} else {
 			presentGame()

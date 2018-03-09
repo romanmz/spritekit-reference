@@ -188,14 +188,15 @@ class ViewController: UIViewController {
 	
 	
 	// ViewController properties
-	var skView: GameView!
+	var skView: MySKView { return view as! MySKView }
 	override var prefersStatusBarHidden: Bool { return true }
 	
-	// Create and insert View
+	// Initialize
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		skView = GameView(frame: view.frame)
-		view.insertSubview(skView, at: 0)
+		// manually adding the SKView as a subview:
+		// skView = MySKView(frame: view.frame)
+		// view.insertSubview(skView, at: 0)
 	}
 	
 	// Event: Button was pressed
