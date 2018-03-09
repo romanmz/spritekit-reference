@@ -50,8 +50,8 @@ class MySKView: SKView, SKViewDelegate {
 		// ------------------------------
 		// the origin point on views is on the top left, on scenes is on the bottom left
 		let testPoint = CGPoint(x: 10, y: 10)
-		convert(testPoint, to: scene1)	// converts a point in the view into a point in the scene
-		convert(testPoint, from: scene1) // vice versa
+		convert(testPoint, to: scene1)		// converts a point in the view into a point in the scene
+		convert(testPoint, from: scene1)	// vice versa
 		
 		
 		// Getting rendered nodes as SKTexture's
