@@ -14,7 +14,7 @@ class MySKView: SKView, SKViewDelegate {
 	// [custom properties]
 	var scene1: MySKScene!
 	var scene2: AnotherSKScene!
-	var sceneTransition: SKTransition!
+	var sceneTransition: SKTransition! // ???
 	
 	// Initialize
 	override func didMoveToWindow() {
@@ -38,7 +38,6 @@ class MySKView: SKView, SKViewDelegate {
 		
 		// Performance configuration
 		// ------------------------------
-		delegate = self
 		preferredFramesPerSecond = 30		// defaults to 60
 		isAsynchronous = true				// defaults to true.  if false the contents of the view will be synchronized with Core Animation updates ???
 		allowsTransparency = true			// defaults to false. defines whether the view will have transparent regions or if it's all opaque (opaque performs better)
@@ -54,7 +53,7 @@ class MySKView: SKView, SKViewDelegate {
 		convert(testPoint, from: scene1)	// vice versa
 		
 		
-		// Getting rendered nodes as SKTexture's
+		// Getting rendered nodes as SKTexture's ???
 		// ------------------------------
 		// the nodes don't necessarily need to belong to the currently presented scene
 		// if the node is not a scene, it will be rendered with a transparent background
@@ -69,6 +68,7 @@ class MySKView: SKView, SKViewDelegate {
 	
 	// Pr - SKViewDelegate methods
 	// ------------------------------
+	// delegate: SKViewDelegate?
 	func view(_ view: SKView, shouldRenderAtTime time: TimeInterval) -> Bool {
 		return true
 	}
@@ -76,6 +76,7 @@ class MySKView: SKView, SKViewDelegate {
 	
 	// Presenting scenes
 	// ------------------------------
+	// scene: SKScene?
 	func presentGame() {
 		presentScene(scene1, transition: sceneTransition)
 	}

@@ -12,25 +12,26 @@ import SpriteKit
 class MySKScene: SKScene {
 	
 	// [custom properties]
-	var spriteNode: MySKSpriteNode!
+	var baseNode: MySKNode!
 	
 	
 	// Presenting a scene
 	// ------------------------------
 	// view: SKView?
 	override func sceneDidLoad() {
+		baseNode = MySKNode(name: "test node")
+		addChild(baseNode)
+		//
 		determineVisibleRegion()
 		coordinatesConversions()
 		addingAudio()
 		setupPhysicsWorld()
-		spriteNode = MySKSpriteNode()
-		addChild(spriteNode)
 	}
 	override func didMove(to view: SKView) {
-		spriteNode.animatePosition()
+		baseNode.addActions()
 	}
 	override func willMove(from view: SKView) {
-		spriteNode.resetPosition()
+		baseNode.removeActions()
 	}
 	
 	
@@ -40,12 +41,12 @@ class MySKScene: SKScene {
 		
 		// You can add an optional SKCameraNode object to determine the region of the scene to be rendered, the camera node must also be added as a child node for this to work
 		// let cameraNode = SKCameraNode() ???
-		// scene.addChild(cameraNode)
-		// scene.camera = cameraNode
+		// addChild(cameraNode)
+		// camera = cameraNode
 		
 		// If there's no camera, then the anchorPoint and size properties will be used to determine the region to render
-		// anchorPoint				// The origin point for the coordinates system, only used if a camera is not present. Defaults to (0,0)
-		// size						// The base scene size, usually the same as the presenting view, if changed manually or automatically it will trigger the 'didChangeSize' method
+		print("scene size: \(size)")				// The base scene size, if changed manually or automatically it will trigger the 'didChangeSize' method
+		print("scene anchor point: \(anchorPoint)")	// The origin point for the coordinates system, only used if a camera is not present. Defaults to (0,0)
 		
 		// If the scene size doesn't match the size of the presenting view, then it will be scaled according to the 'scaleMode' property:
 		scaleMode = .fill			// Scales the scene to fit the view (distortion may occur)
@@ -99,16 +100,18 @@ class MySKScene: SKScene {
 	// Adding audio
 	// ------------------------------
 	func addingAudio() {
-		// - The simplest way to add audio is to add a child SKAudioNode
-		// addChild( SKAudioNode(fileNamed: "drums.mp3") )
+		/*
+		- The simplest way to add audio is to add a child SKAudioNode
+		addChild( SKAudioNode(fileNamed: "drums.mp3") )
 		
-		// - By default, the origin of the generated audio is the scene's origin point, to change this use an existing SKNode as the 'listener' property
-		// listener = myAudioOriginNode
+		- By default, the origin of the generated audio is the scene's origin point, to change this use an existing SKNode as the 'listener' property
+		listener: SKNode?
 		
-		// - For more advanced functionality, an AVAudioEngine instance is automatically made available.
-		// Example for lowering the volume and then pausing the audio:
-		// audioEngine.mainMixerNode.outputVolume = 0.2
-		// audioEngine.pause()
+		- For more advanced functionality, an AVAudioEngine instance is automatically made available.
+		Example for lowering the volume and then pausing the audio:
+		audioEngine.mainMixerNode.outputVolume = 0.2
+		audioEngine.pause()
+		*/
 	}
 	
 	
