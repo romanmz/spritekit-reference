@@ -10,6 +10,8 @@ import UIKit
 import SpriteKit
 
 class MySKUniform: SKUniform {
+	
+	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
 		self.init(name: "u_red_factor")
 		
@@ -23,7 +25,7 @@ class MySKUniform: SKUniform {
 		// Read-only properties
 		// ------------------------------
 		let _ = name			// The variable name to assign to the uniform (set automatically during initialization)
-		let _ = uniformType		// The data type this uniform holds (read only, set automatically as soon as you set a value)
+		let _ = uniformType		// The data type this uniform holds (set automatically as soon as you set a value)
 		
 		
 	}
