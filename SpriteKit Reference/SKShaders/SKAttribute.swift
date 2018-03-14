@@ -13,7 +13,7 @@ class MySKAttribute: SKAttribute {
 	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
-		self.init(name: "a_blue_factor", type: .float)
+		self.init(name: "a_green_factor", type: .float)
 		
 		
 		// Read-only properties
