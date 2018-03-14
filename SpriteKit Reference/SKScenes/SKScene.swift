@@ -19,7 +19,7 @@ class MySKScene: SKScene {
 	// ------------------------------
 	// view: SKView?
 	override func sceneDidLoad() {
-		baseNode = MySKNode(name: "test node")
+		baseNode = MySKNode(test: "test")
 		addChild(baseNode)
 		//
 		determineVisibleRegion()
@@ -28,10 +28,10 @@ class MySKScene: SKScene {
 		setupPhysicsWorld()
 	}
 	override func didMove(to view: SKView) {
-		baseNode.addActions()
+		baseNode.initNodes()
 	}
 	override func willMove(from view: SKView) {
-		baseNode.removeActions()
+		baseNode.destroyNodes()
 	}
 	
 	
@@ -55,7 +55,7 @@ class MySKScene: SKScene {
 		scaleMode = .resizeFill		// The scene is not scaled, it is resized to always match the view (updates the 'size' property and triggers 'didChangeSize')
 		
 		// Set background colour, defaults to a mid grey colour
-		backgroundColor = .blue
+		backgroundColor = .lightGray
 	}
 	override func didChangeSize(_ oldSize: CGSize) {}
 	

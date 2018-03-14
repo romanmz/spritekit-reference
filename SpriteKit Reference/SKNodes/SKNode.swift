@@ -10,29 +10,21 @@ import UIKit
 import SpriteKit
 
 class MySKNode: SKNode {
-	// this is the base class that defines behaviour for all nodes, it doesn't draw any contents by itself, however you can use it to represent invisible elements, group other nodes, organise all content into layers, or implement your own subclasses
+	// this is the class that defines the base behaviour for all nodes, it doesn't draw any contents by itself,
+	// however you can use it to represent invisible elements, group other nodes, organise all content into layers, or implement your own subclasses
 	// NOTE: Node manipulation should always occur on the main thread, methods implemented by SKViewDelegate, SKScene, and SKSceneDelegate already take care of this
 	// to make changes to nodes in other places you need to manually ensure you are on the main thread, or always defer to a delegate object
 	
 	// [custom initializer to avoid overriding the default ones]
-	convenience init(name: String) {
+	convenience init(test: String) {
 		self.init()
-		basicProperties()
-		userInteraction()
-		nodeTrees()
-		coordinatesConversions()
-		setupPhysicsBody()
-		setupConstraints()
-		setupGameplayKit()
-		setupAccessibility()
-	}
-	
-	
-	// Basic properties
-	// ------------------------------
-	// each node is positioned relative to its parent's coordinates system, and any transformations applied to a parent also affect their children
-	func basicProperties() {
+		
+		
 		/*
+		// Basic properties
+		// ------------------------------
+		// Each node is positioned relative to its parent's coordinates system, and any transformations applied to a parent also affects their children
+		
 		// Size/position
 		frame							// get rect of the bounding box of the node's contents (not including children)
 		calculateAccumulatedFrame()		// get rect of the bounding box of the node's contents, including all descendant nodes
@@ -51,37 +43,11 @@ class MySKNode: SKNode {
 		
 		// Custom data
 		userData						// get/set a dictionary for your own custom data as required by the game, not used by SpriteKit, automatically encoded and decoded
-		*/
-	}
-	
-	
-	// User interaction
-	// ------------------------------
-	func userInteraction() {
-		isUserInteractionEnabled = true	// get/set whether or not the node should detect user interactions and trigger events. Defaults to false
 		
-		// To handle those events you need to implement the methods of the UIResponder class
-		// this example uses 'touchesBegan' but there's many others, for a full reference check out:
-		// https://developer.apple.com/documentation/uikit/uiresponder
-	}
-	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		guard
-			let scene = self.scene,
-			let view = scene.view,
-			let touch = touches.first else { return }
-		// The UITouch class includes methods for getting the location of the user's touch in the window (passing nil) or in a view's coordinates
-		print( "Touch position in window: \(touch.location(in: nil))" )
-		print( "Touch position in view: \(touch.location(in: view))" )
-		// it also supports passing SKNode elements to find the touch location relative to a node's coordinates:
-		print( "Touch position in scene: \(touch.location(in: scene))")
-		print( "Touch position in node: \(touch.location(in: self))" )
-	}
-	
-	
-	// Working with node trees
-	// ------------------------------
-	func nodeTrees() {
-		/*
+		
+		// Working with node trees
+		// ------------------------------
+		
 		// Related nodes
 		scene: SKScene?
 		parent: SKNode?
@@ -103,18 +69,13 @@ class MySKNode: SKNode {
 		name: String?
 		childNode(withName:)					// Returns the first matching node
 		enumerateChildNodes(withName:using:)	// Finds all matching nodes and applies a callback to each of them
-		[string]								// Returns an array with all matching nodes
-		*/
-	}
-	
-	
-	// Running actions
-	// ------------------------------
-	// Animations are defined as SKAction ??? elements
-	func addActions() {
-		guard let scene = self.scene else { return }
+		[String]								// Returns an array with all matching nodes
 		
-		/*
+		
+		// Running actions
+		// ------------------------------
+		// Animations are defined as SKAction ??? elements
+		
 		// run animations
 		run(_:)					// Runs an action on a node, you can call this many times to add multiple actions, but it's best practice to use an 'action group' instead
 		run(_:completion:)		// Same but runs a callback block when the action has ended
@@ -133,31 +94,9 @@ class MySKNode: SKNode {
 		isPaused				// get/set whether or not the actions applied to the node should be paused. Defaults to false
 		*/
 		
-		// [center and animate base node]
-		position = CGPoint(x: scene.size.width/2, y: scene.size.height/2)
-		run( SKAction.moveBy(x: 0, y: -100, duration: 5) )
 		
-		// [create extra nodes]
-		let dotsSize = CGSize(width: 10, height: 10)
-		let whiteDot = SKSpriteNode(color: .white, size: dotsSize)
-		let redDot = SKSpriteNode(color: .red, size: dotsSize)
-		addChild(whiteDot)
-		addChild(redDot)
-		
-		// [animate extra nodes]
-		whiteDot.run( SKAction.moveBy(x: -100, y: 0, duration: 5) )
-		redDot.run( SKAction.moveBy(x: 100, y: 0, duration: 5) )
-		redDot.speed = 2
-	}
-	func removeActions() {
-		removeAllActions()
-		removeAllChildren()
-	}
-	
-	
-	// Coordinates conversions
-	// ------------------------------
-	func coordinatesConversions() {
+		// Coordinates conversions
+		// ------------------------------
 		
 		// [setup test node]
 		let testPoint = CGPoint(x: 10, y: 10)
@@ -176,46 +115,36 @@ class MySKNode: SKNode {
 									// if there's no matching nodes, then the current node itself will be returned
 		nodes(at: testPoint)		// returns all descendant nodes that intersect the point (only visible nodes)
 		intersects(testNode)		// returns true if the (non accumulated) bounding box of the given node intersects the bounding box of the current node
-	}
-	
-	
-	// ------------------------------
-	// SKPhysicsBody ???
-	// ------------------------------
-	func setupPhysicsBody() {
-		// physicsBody: SKPhysicsBody?
-	}
-	
-	
-	// ------------------------------
-	// SKConstraint, SKReachConstraints ???
-	// ------------------------------
-	func setupConstraints() {
-		// constraints: [SKConstraint]?
-		// reachConstraints: SKReachConstraints?
-	}
-	
-	
-	// ------------------------------
-	// GameplayKit ???
-	// ------------------------------
-	func setupGameplayKit() {
+		
+		
 		/*
+		// ------------------------------
+		// SKPhysicsBody ???
+		// ------------------------------
+		physicsBody: SKPhysicsBody?
+		
+		
+		// ------------------------------
+		// SKConstraint, SKReachConstraints ???
+		// ------------------------------
+		constraints: [SKConstraint]?
+		reachConstraints: SKReachConstraints?
+		
+		
+		// ------------------------------
+		// GameplayKit ???
+		// ------------------------------
 		// Assign an entity to the node
 		entity: GKEntity?
 		// Create obstacles from existing nodes
 		SKNode.obstacles(fromNodeBounds:)
 		SKNode.obstacles(fromNodePhysicsBodies:)
 		SKNode.obstacles(fromSpriteTextures:, accuracy:)
-		*/
-	}
-	
-	
-	// ------------------------------
-	// Accessibility ???
-	// ------------------------------
-	func setupAccessibility() {
-		/*
+		
+		
+		// ------------------------------
+		// Accessibility ???
+		// ------------------------------
 		accessibilityChildren: [Any]?
 		accessibilityFrame: CGRect
 		accessibilityHelp: String?
@@ -229,13 +158,34 @@ class MySKNode: SKNode {
 		isAccessibilityEnabled: Bool
 		accessibilityHitTest(_:)
 		*/
+		
+		
+		// User interaction
+		// ------------------------------
+		isUserInteractionEnabled = true		// get/set whether or not the node should detect user interactions and trigger events. Defaults to false
+		
+		// To handle those events you need to implement the methods of the UIResponder class
+		// this example uses 'touchesBegan' but there's many others, for a full reference check out:
+		// https://developer.apple.com/documentation/uikit/uiresponder
+	}
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		guard
+			let scene = self.scene,
+			let view = scene.view,
+			let touch = touches.first else { return }
+		// The UITouch class includes methods for getting the location of the user's touch in the window (passing nil) or in a view's coordinates
+		print( "Touch position in window: \(touch.location(in: nil))" )
+		print( "Touch position in view: \(touch.location(in: view))" )
+		// it also supports passing SKNode elements to find the touch location relative to a node's coordinates:
+		print( "Touch position in scene: \(touch.location(in: scene))")
+		print( "Touch position in node: \(touch.location(in: self))" )
 	}
 	
 	
+	/*
 	// ------------------------------
 	// Render order and Hit testing
 	// ------------------------------
-	/*
 	The order of the nodes in the 'children' array affects rendering and hit testing
 	
 	ORDER:
@@ -263,13 +213,11 @@ class MySKNode: SKNode {
 	HIT TESTING:
 	- nodes are evaluated for hit-testing (user actions detection) in the reverse order as the rendering order (nodes on top are evaluated before elements on the bottom)
 	- to handle user interactions, the nodes already implement the UIResponder class, you just need to manually implement its methods
-	*/
-	
+
 	
 	// ------------------------------
 	// Name search syntax
 	// ------------------------------
-	/*
 	Types of name search:
 	myName						// node names
 	StandardClass				// standard class names
@@ -284,11 +232,51 @@ class MySKNode: SKNode {
 
 	Special characters:
 	./myName					// . represents to the current node, this example is the same as just passing the name
-	../myName					// .. represents to the parent node, this example matches sibling nodes
+	../myName					// .. represents to the parent node, this example matches sibling nodes with the passed name
 	*							// * matches 0 or more characters (any)
 	[0-9]						// matches one character that must be a number between 0 and 9
 	[a-z]						// matches one character that must be a letter between a and z
 	*/
+	
+	
+	// [adding different types of nodes for testing]
+	func initNodes() {
+		guard let scene = self.scene else { return }
+		
+		// test actions (animations)
+		let whiteDot = SKSpriteNode(color: .white, size: CGSize(width: 10, height: 10))
+		let redDot = SKSpriteNode(color: .red, size: CGSize(width: 10, height: 10))
+		addChild(whiteDot)
+		addChild(redDot)
+		
+		self.position = CGPoint(x: scene.size.width/2, y: scene.size.height/2)
+		redDot.speed = 2
+		
+		self.run( SKAction.moveBy(x: 0, y: -100, duration: 5) )
+		whiteDot.run( SKAction.moveBy(x: -100, y: 0, duration: 5) )
+		redDot.run( SKAction.moveBy(x: 100, y: 0, duration: 5) )
+		
+		// test light nodes
+		let lightNode = MySKLightNode(test: "test")
+		lightNode.addChild(SKSpriteNode(color: .yellow, size: CGSize(width: 2, height: 2)))
+		addChild(lightNode)
+		
+		lightNode.position = CGPoint(x: -50, y: -150)
+		lightNode.run(SKAction.moveBy(x: 0, y: 300, duration: 5))
+		lightNode.zPosition = -1
+		
+		// test sprite nodes and shaders
+		let spriteNode1 = MySKSpriteNode(test: "test")
+		let spriteNode2 = MySKSpriteNode(test: "test")
+		addChild(spriteNode1)
+		addChild(spriteNode2)
+		spriteNode2.position = CGPoint(x: 0, y: 50)
+		spriteNode2.applyShader()
+	}
+	func destroyNodes() {
+		removeAllActions()
+		removeAllChildren()
+	}
 	
 	
 }

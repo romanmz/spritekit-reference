@@ -14,7 +14,7 @@ class MySKLightNode: SKLightNode {
 	// Only applies to sprite nodes that have been specifically setup to be affected by light sources
 	
 	// [custom initializer to avoid overriding the default ones]
-	convenience init(name: String) {
+	convenience init(test: String) {
 		self.init()
 		
 		

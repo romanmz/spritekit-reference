@@ -40,8 +40,8 @@ class MySKView: SKView, SKViewDelegate {
 		// ------------------------------
 		preferredFramesPerSecond = 30		// defaults to 60
 		isAsynchronous = true				// defaults to true.  if false the contents of the view will be synchronized with Core Animation updates ???
-		allowsTransparency = true			// defaults to false. defines whether the view will have transparent regions or if it's all opaque (opaque performs better)
-		ignoresSiblingOrder = true			// defaults to false. set to true if the order in which sibling nodes are rendered is not important (which improves performance)
+		allowsTransparency = false			// defaults to false. defines whether the view will have transparent regions or if it's all opaque (opaque performs better)
+		ignoresSiblingOrder = false			// defaults to false. set to true if the order in which sibling nodes are rendered is not important (which improves performance)
 		shouldCullNonVisibleNodes = true	// defaults to true.  by default scenes check for offscreen or hidden nodes on every frame and removes them,
 											//					  setting this to false improves performance as you'll skip this check, but you'll need to do this culling manually
 		
