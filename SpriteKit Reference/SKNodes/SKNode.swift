@@ -15,6 +15,14 @@ class MySKNode: SKNode {
 	// NOTE: Node manipulation should always occur on the main thread, methods implemented by SKViewDelegate, SKScene, and SKSceneDelegate already take care of this
 	// to make changes to nodes in other places you need to manually ensure you are on the main thread, or always defer to a delegate object
 	
+	
+	/*
+	// Init shortcuts
+	// ------------------------------
+	init(fileNamed:)					// Creates the node based on the given .sks file
+	*/
+	
+	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
 		self.init()

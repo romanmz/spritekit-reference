@@ -14,6 +14,14 @@ class MySKShader: SKShader {
 	// The shaders need to be written using OpenGL ES 2.0 (extensions are not supported)
 	// To apply the shader to a node, create an instance of this class and assign it to the node's 'shader' property
 	
+	
+	/*
+	// Init shortcuts
+	// ------------------------------
+	init(fileNamed:)					// Assigns the 'source' property based on the given .fsh file
+	*/
+	
+	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
 		

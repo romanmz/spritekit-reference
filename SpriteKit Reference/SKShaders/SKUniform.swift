@@ -18,8 +18,14 @@ class MySKUniform: SKUniform {
 		
 		// Setting the value
 		// ------------------------------
-		floatValue = 0.0		// The value to pass to the shader. Can be a float, floatVector2/3/4 or floatMatrix2/3/4
-		let _ = textureValue	// The texture data to pass to the shader, if applicable
+		floatValue = 0.0			// The value to pass to the shader as a float value, or floatMatrix2/3/4
+		// vectorFloat2Value		// The value to pass to the shader as a vector_float2 value
+		// vectorFloat3Value		// The value to pass to the shader as a vector_float3 value
+		// vectorFloat4Value		// The value to pass to the shader as a vector_float4 value
+		// matrixFloat2x2Value		// The value to pass to the shader as a matrix_float2x2 value
+		// matrixFloat3x3Value		// The value to pass to the shader as a matrix_float3x3 value
+		// matrixFloat4x4Value		// The value to pass to the shader as a matrix_float4x4 value
+		// textureValue				// The texture data to pass to the shader, if applicable
 		
 		
 		// Read-only properties

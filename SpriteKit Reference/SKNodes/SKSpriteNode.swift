@@ -11,6 +11,15 @@ import SpriteKit
 
 class MySKSpriteNode: SKSpriteNode {
 	
+	
+	/*
+	// Init shortcuts
+	// ------------------------------
+	init(imageNamed:)					// Assigns the texture based on the given file, and sets the 'size' property to match the size of the texture
+	init(imageNamed:normalMapped:)		// Same, but if 'normalMapped' is true, creates and sets the 'normalTexture' property based on the main texture
+	*/
+	
+	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
 		self.init()
