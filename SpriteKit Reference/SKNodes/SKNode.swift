@@ -300,6 +300,11 @@ class MySKNode: SKNode {
 		let cropNode = MySKCropNode(test: "test")
 		cropNode.position = CGPoint(x: -100, y: 140)
 		addChild(cropNode)
+		
+		// test reference node
+		guard let refNode = MySKReferenceNode(test: "test") else { return }
+		refNode.position = CGPoint(x: 100, y: 140)
+		addChild(refNode)
 	}
 	func destroyNodes() {
 		removeAllActions()
