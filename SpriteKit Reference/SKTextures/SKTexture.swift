@@ -37,6 +37,11 @@ class MySKTexture: SKTexture {
 	init(vectorNoiseWithSmoothness:,size:)		// Directional noise data, smoothness can be from 0.0 to 1.0
 	init(noiseWithSmoothness:,size:,grayscale:)	// Colored noise data, you can set grayscale to true for grayscale-only textures
 	init(noiseMap:)								// Creates the texture from a GKNoiseMap ??? object
+	
+	
+	// Init shortcuts (from existing node trees)
+	// ------------------------------
+	// The SKView class has methods to generate textures from existing node trees
 	*/
 	
 	

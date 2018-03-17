@@ -53,12 +53,11 @@ class MySKView: SKView, SKViewDelegate {
 		convert(testPoint, from: scene1)	// vice versa
 		
 		
-		// Getting rendered nodes as SKTexture's ???
+		// Create SKTexture objects
 		// ------------------------------
-		// the nodes don't necessarily need to belong to the currently presented scene
-		// if the node is not a scene, it will be rendered with a transparent background
-		// texture(from: SKNode)
-		// texture(from: SKNode, crop: CGRect)
+		// texture(from:)				// creates a texture by rendering the given node tree, which doesn't necessarily need to belong to the currently presented scene
+										// the texture size is set the to the size of the accumulated frame of the node
+		// texture(from:,crop:)			// same but allows you to crop the texture to a defined size
 		
 		
 		// [present default scene]
