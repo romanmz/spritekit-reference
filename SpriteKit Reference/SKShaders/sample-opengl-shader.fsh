@@ -1,5 +1,5 @@
 //
-//  OpenGLShader.fsh
+//  sample-opengl-shader.fsh
 //  SpriteKit Reference
 //
 //  Created by Roman Martinez on 14/3/18.

@@ -30,7 +30,7 @@ class MySKShader: SKShader {
 		// ------------------------------
 		// To add the source code you can refer to a .fsh file during initialization,
 		// or manually add the code to the 'source' attribute
-		self.init(fileNamed: "OpenGLShader.fsh")
+		self.init(fileNamed: "sample-opengl-shader.fsh")
 		// source: String
 		
 		
