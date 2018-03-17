@@ -295,6 +295,11 @@ class MySKNode: SKNode {
 		let videoNode = MySKVideoNode(test: "test")
 		videoNode.position = CGPoint(x: -140, y: 60)
 		addChild(videoNode)
+		
+		// test crop node
+		let cropNode = MySKCropNode(test: "test")
+		cropNode.position = CGPoint(x: -100, y: 140)
+		addChild(cropNode)
 	}
 	func destroyNodes() {
 		removeAllActions()
