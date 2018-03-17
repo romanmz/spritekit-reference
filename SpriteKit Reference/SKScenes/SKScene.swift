@@ -101,7 +101,7 @@ class MySKScene: SKScene {
 	// ------------------------------
 	func addingAudio() {
 		/*
-		- The simplest way to add audio is to add a child SKAudioNode
+		- The simplest way to add audio is to add a child SKAudioNode ???
 		addChild( SKAudioNode(fileNamed: "drums.mp3") )
 		
 		- By default, the origin of the generated audio is the scene's origin point, to change this use an existing SKNode as the 'listener' property
@@ -119,7 +119,7 @@ class MySKScene: SKScene {
 	// SKPhysicsWorld ???
 	// ------------------------------
 	func setupPhysicsWorld() {
-		// self.physicsWorld
+		// physicsWorld: SKPhysicsWorld
 	}
 	
 	

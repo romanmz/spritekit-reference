@@ -50,10 +50,10 @@ class MySKShader: SKShader {
 		SpriteKit passes the following defaut variables and functions:
 		- u_texture
 		- u_time
-		- u_path_length
+		- u_path_length				// only when applied to a shape stroke
 		- v_tex_coord
 		- v_color_mix
-		- v_path_distance
+		- v_path_distance			// only when applied to a shape stroke
 		- SKDefaultShading()
 		
 		

@@ -272,6 +272,11 @@ class MySKNode: SKNode {
 		addChild(spriteNode2)
 		spriteNode2.position = CGPoint(x: 0, y: 50)
 		spriteNode2.applyShader()
+		
+		// test shape node
+		let shapeNode = MySKShapeNode(test: "test")
+		shapeNode.position = CGPoint(x: 0, y: 100)
+		addChild(shapeNode)
 	}
 	func destroyNodes() {
 		removeAllActions()
