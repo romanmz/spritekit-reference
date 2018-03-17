@@ -292,7 +292,8 @@ class MySKNode: SKNode {
 		addChild(labelNode)
 		
 		// test video node
-		let videoNode = MySKVideoNode()
+		let videoNode = MySKVideoNode(test: "test")
+		videoNode.position = CGPoint(x: -140, y: 60)
 		addChild(videoNode)
 	}
 	func destroyNodes() {

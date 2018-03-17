@@ -25,13 +25,13 @@ class MySKVideoNode: SKVideoNode {
 	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
-		self.init()
+		self.init(fileNamed: "sample-video.mp4")
 		
 		
 		// Video properties
 		// ------------------------------
-		let _ = size				// get/set the size of the video. Defaults to the size of the initialized video
-		let _ = anchorPoint			// get/set the anchor point of the video. Defaults to the center (0.5,0.5)
+		size = CGSize(width: 80, height: 45)	// get/set the size of the video
+		anchorPoint = CGPoint(x: 0, y:0)		// get/set the anchor point of the video. Defaults to the center (0.5,0.5)
 		
 		
 		// Video playback
