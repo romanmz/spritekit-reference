@@ -78,7 +78,7 @@ class MySKTexture: SKTexture {
 		// Preloading
 		// ------------------------------
 		preload(completionHandler:)						// Prepares the current texture for rendering, calling the completion handler afterwards
-		SKTexture.preload(_:withCompletionHandler:)		// Type method, use this for when you need to preload multiple images at the same time
+		SKTexture.preload(_:withCompletionHandler:)		// Type method. Use this for when you need to preload multiple images at the same time
 		*/
 	}
 	
@@ -108,7 +108,7 @@ class MySKTexture: SKTexture {
 	- for textures that are essential to a scene that is about to be loaded, preload as many as possible before presenting the scene
 	- pre-emptively load the rest of the textures shortly before they are required
 	- dispose of textures as soon as you can if you're sure you won't be using it again, this frees up memory
-	- if there's a list of images that you generally load at the same time, group them using a SKTextureAtlas ??? to load them in a single pass
+	- if there's a list of images that you generally load at the same time, group them using a SKTextureAtlas to load them in a single pass
 	- if multiple nodes use the same texture, make them reference the same texture object instead of creating multiple instances
 	
 	To remove existing textures from memory, delete all strong references to the texture object, including:
