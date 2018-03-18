@@ -47,7 +47,7 @@ class MySKTexture: SKTexture {
 	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
-		self.init()
+		self.init(imageNamed: "sample-texture")
 		
 		
 		/*

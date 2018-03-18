@@ -29,7 +29,7 @@ class MySKSpriteNode: SKSpriteNode {
 		// ------------------------------
 		
 		// Load SKTexture objects
-		texture = SKTexture(imageNamed: "rounded-rectangle")			// get/set the texture used to draw the sprite
+		texture = MySKTexture(test: "test")								// get/set the texture used to draw the sprite
 		centerRect = CGRect(x: 1.0/3, y: 1/3, width: 1/3, height: 1/3)	// get/set a rect to define a 3x3 slicing grid to handle uneven scaling of the sprite (values from 0 to 1)
 		guard let texture = self.texture else { return }
 		
