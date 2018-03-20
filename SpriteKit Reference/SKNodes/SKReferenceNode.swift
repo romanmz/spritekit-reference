@@ -24,7 +24,7 @@ class MySKReferenceNode: SKReferenceNode {
 	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init?(test: String) {
-		let fileName: String? = "sample-scene.sks"
+		let fileName: String? = "sample-reference-node.sks"
 		self.init(fileNamed: fileName)
 		
 		
