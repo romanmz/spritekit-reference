@@ -57,7 +57,7 @@ class MySKView: SKView, SKViewDelegate {
 		// ------------------------------
 		// texture(from:)				// creates a texture by rendering the given node tree, which doesn't necessarily need to belong to the currently presented scene
 										// the texture size is set the to the size of the accumulated frame of the node
-		// texture(from:,crop:)			// same but allows you to crop the texture to a defined size
+		// texture(from:crop:)			// same but allows you to crop the texture to a defined size
 		
 		
 		// [present default scene]

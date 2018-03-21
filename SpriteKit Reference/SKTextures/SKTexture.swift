@@ -27,15 +27,15 @@ class MySKTexture: SKTexture {
 	
 	// Init shortcuts (from raw pixel data)
 	// ------------------------------
-	init(data:,size:)						// Creates a new texture from raw pixel data
-	init(data:,size:,rowLength:,alignment:)	// Same, but allows you to limit the number of pixels to display per row, and the spacing between them
-	init(data:,size:,flipped:)				// Same, but if 'flipped' is true, the image will be flipped vertically
+	init(data:size:)						// Creates a new texture from raw pixel data
+	init(data:size:rowLength:alignment:)	// Same, but allows you to limit the number of pixels to display per row, and the spacing between them
+	init(data:size:flipped:)				// Same, but if 'flipped' is true, the image will be flipped vertically
 	
 	
 	// Init shortcuts (from procedural noise textures and maps)
 	// ------------------------------
-	init(vectorNoiseWithSmoothness:,size:)		// Directional noise data, smoothness can be from 0.0 to 1.0
-	init(noiseWithSmoothness:,size:,grayscale:)	// Colored noise data, you can set grayscale to true for grayscale-only textures
+	init(vectorNoiseWithSmoothness:size:)		// Directional noise data, smoothness can be from 0.0 to 1.0
+	init(noiseWithSmoothness:size:grayscale:)	// Colored noise data, you can set grayscale to true for grayscale-only textures
 	init(noiseMap:)								// Creates the texture from a GKNoiseMap ??? object
 	
 	

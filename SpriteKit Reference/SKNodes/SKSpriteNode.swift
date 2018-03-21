@@ -59,7 +59,7 @@ class MySKSpriteNode: SKSpriteNode {
 	}
 	
 	
-	// Adding Shaders
+	// Adding shaders
 	// ------------------------------
 	func applyShader() {
 		shader = MySKShader(test: "test")					// get/set the SKShader object to apply to the node, if any

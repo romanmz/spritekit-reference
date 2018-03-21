@@ -17,7 +17,7 @@ class MySKShapeNode: SKShapeNode {
 	/*
 	// Init shortcuts
 	// ------------------------------
-	init(path:,centered:)					// If 'centered' is true, the path is translated so that its center matches the node's origin point
+	init(path:centered:)					// If 'centered' is true, the path is translated so that its center matches the node's origin point
 	init(rect:)								// Creates a rectangular path based on the given CGRect
 	init(rect:cornerRadius:)				// Same but adds rounded corners
 	init(rectOf:)							// Creates a rectangular path centered at origin based on the given CGSize
@@ -67,7 +67,7 @@ class MySKShapeNode: SKShapeNode {
 		
 		// Managing shader attribute values works the same as in sprite nodes:
 		attributeValues: [String: SKAttributeValue]
-		setValue(:,forAttribute:)
+		setValue(_:forAttribute:)
 		value(forAttributeNamed:)
 		
 		// On shape nodes you set separate shaders for fill and stroke

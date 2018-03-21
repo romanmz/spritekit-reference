@@ -147,7 +147,7 @@ class MySKNode: SKNode {
 		// Create obstacles from existing nodes
 		SKNode.obstacles(fromNodeBounds:)
 		SKNode.obstacles(fromNodePhysicsBodies:)
-		SKNode.obstacles(fromSpriteTextures:, accuracy:)
+		SKNode.obstacles(fromSpriteTextures:accuracy:)
 		
 		
 		// ------------------------------
