@@ -305,6 +305,11 @@ class MySKNode: SKNode {
 		guard let refNode = MySKReferenceNode(test: "test") else { return }
 		refNode.position = CGPoint(x: 100, y: 140)
 		addChild(refNode)
+		
+		// test tile map node
+		let tileMapNode = MySKTileMapNode(test: "test")
+		tileMapNode.zPosition = -10
+		scene.addChild(tileMapNode)
 	}
 	func destroyNodes() {
 		removeAllActions()
