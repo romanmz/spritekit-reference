@@ -10,15 +10,16 @@ import UIKit
 import SpriteKit
 
 class MySKTileSet: SKTileSet {
-	// A tile set defines the layout to use to create the tile map
-	// and puts together one or more tile groups that define how to fill in the map spots
+	// A tile set defines:
+	// - what kind of tiles (tile groups) will be possible to add on maps that implement this set
+	// - how the tiles will be arranged (grid, hexagonal or isometric)
 	
 	
 	/*
 	// Init shortcuts
 	// ------------------------------
-	init(named:)					// Creates the set from an .sks tile set file from the bundle
-	init(from:)						// Same but loads the file from an URL
+	init(named:)					// Creates the set from an .sks tile set file (you need to pass the actual name of the tile set, not the name of the file)
+	init(from:)						// Creates the set from an URL
 	*/
 	
 	
@@ -30,14 +31,14 @@ class MySKTileSet: SKTileSet {
 		// Tile set properties
 		// ------------------------------
 		name = "standard set"						// get/set the name of the tile set
-		type = .grid								// get/set how the tiles will be arranged when placed in a tile map. Defaults to .grid
-		tileGroups = [MySKTileGroup(test: "test")]	// get/set the list of tile groups that will be used on the map
+		type = .grid								// get/set the type of layout this set will create (grid, hexagonal, isometric). Defaults to .grid
+		tileGroups = [MySKTileGroup(test: "test")]	// get/set the types of tiles (tile groups) that can be added to the map
 		
 		
 		// Tile map defaults
 		// ------------------------------
-		defaultTileSize = CGSize(width: 20, height: 20)	// get/set the default size for the tiles, in case the map node doesn't specify one
-		defaultTileGroup = MySKTileGroup(test: "test")	// get/set the group to use whenever there's map spots that require rules that none of the groups match
+		defaultTileSize = CGSize(width: 20, height: 20)	// get/set the default size for each tile, in case the map node doesn't specify one
+		defaultTileGroup = MySKTileGroup(test: "test")	// get/set the tile group to use whenever a map's automapping feature fails to find an appropiate tile to fill in a spot
 		
 		
 	}

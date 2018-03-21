@@ -10,7 +10,8 @@ import UIKit
 import GameplayKit
 
 class MySKTileDefinition: SKTileDefinition {
-	// Describes the actual visuals of a single type of tile to be used within a tile map
+	// A tile definition is the actual graphic to be used as a fragment of a type of tile
+	// To make it an animated graphic, add more than 1 texture and set the animation's time per frame
 	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
@@ -19,24 +20,24 @@ class MySKTileDefinition: SKTileDefinition {
 		
 		// Tile properties
 		// ------------------------------
-		name = "yellow pill"		// get/set the name of the tile
-		placementWeight = 1			// get/set how much priority this tile will have over others when a tile group rule is deciding what tile to display
-									// a higher weight means the tile is used more often instead of others. Defaults to 1
+		name = "yellow pill"		// get/set the name of the tile definition
+		placementWeight = 1			// get/set how much priority this tile will have over others included on the same group rule
+									// a higher weight means this tile will be selected more often than the others. Defaults to 1
 		userData = [:]				// get/set a dictionary with custom data for your game. SpriteKit doesn't do anything with it, but it's automatically encoded/decoded for you
 		
 		
 		// Define the graphics
 		// ------------------------------
-		size = CGSize(width: 10, height: 10)	// get/set the size of the tile
-		textures = [MySKTexture(test: "test")]	// get/set the array of textures used to display the tile (multiple textures are animated)
-		normalTextures = []						// get/set the array of normal textures to apply to the tile (multiple textures are animated)
+		size = CGSize(width: 20, height: 20)	// get/set the size of the graphic
+		textures = [MySKTexture(test: "test")]	// get/set the array of textures that represent the tile fragment (multiple textures are animated)
+		normalTextures = []						// get/set the array of normal textures to apply (multiple textures are animated)
 		timePerFrame = 0.2						// get/set the time in seconds that a single texture is displayed before showing the next one
 		
 		
 		// Flip/rotate the tile
 		// ------------------------------
-		flipHorizontally = false				// get/set whether or not to flip the tile horizontally
-		flipVertically = false					// get/set whether or not to flip the tile vertically
+		flipHorizontally = false				// get/set whether or not to flip the graphic horizontally
+		flipVertically = false					// get/set whether or not to flip the graphic vertically
 		rotation = .rotation0					// get/set the rotation of the tile
 		
 		
