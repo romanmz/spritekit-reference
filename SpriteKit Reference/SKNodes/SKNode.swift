@@ -250,19 +250,21 @@ class MySKNode: SKNode {
 	// [adding different types of nodes for testing]
 	func initNodes() {
 		guard let scene = self.scene else { return }
+		self.position = CGPoint(x: scene.size.width/2, y: scene.size.height/2)
 		
-		// test actions (animations)
+		// test actions
 		let whiteDot = SKSpriteNode(color: .white, size: CGSize(width: 10, height: 10))
 		let redDot = SKSpriteNode(color: .red, size: CGSize(width: 10, height: 10))
+		let actionMoveLeft = SKAction.moveBy(x: -100, y: 0, duration: 5)
+		let actionMoveRight = SKAction.moveBy(x: 100, y: 0, duration: 5)
+		let actionMoveDown = SKAction.moveBy(x: 0, y: -100, duration: 5)
+		let actionFromFile = SKAction(named: "rotationTest")!
+		redDot.speed = 2
 		addChild(whiteDot)
 		addChild(redDot)
-		
-		self.position = CGPoint(x: scene.size.width/2, y: scene.size.height/2)
-		redDot.speed = 2
-		
-		self.run( SKAction.moveBy(x: 0, y: -100, duration: 5) )
-		whiteDot.run( SKAction.moveBy(x: -100, y: 0, duration: 5) )
-		redDot.run( SKAction.moveBy(x: 100, y: 0, duration: 5) )
+		self.run( actionMoveDown )
+		whiteDot.run( actionMoveLeft )
+		redDot.run( SKAction.group( [actionMoveRight, actionFromFile] ) )
 		
 		// test light nodes
 		let lightNode = MySKLightNode(test: "test")
