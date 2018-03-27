@@ -86,7 +86,7 @@ class MySKNode: SKNode {
 		
 		// run animations
 		run(_:)					// Runs an action on a node, you can call this many times to add multiple actions, but it's best practice to use an 'action group' instead
-		run(_:completion:)		// Same but runs a callback block when the action has ended
+		run(_:completion:)		// Same but runs a callback block when the action has ended (if the action is cancelled the callback never runs)
 		
 		// using id keys
 		run(_:withKey:)			// Runs an action and specifies an id key for it, if an action with the same id is already running it will be removed before adding the new one
