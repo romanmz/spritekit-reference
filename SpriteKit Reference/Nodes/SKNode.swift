@@ -82,7 +82,7 @@ class MySKNode: SKNode {
 		
 		// Running actions
 		// ------------------------------
-		// Animations are defined as SKAction ??? elements
+		// Animations are defined as SKAction elements
 		
 		// run animations
 		run(_:)					// Runs an action on a node, you can call this many times to add multiple actions, but it's best practice to use an 'action group' instead
@@ -127,16 +127,16 @@ class MySKNode: SKNode {
 		
 		/*
 		// ------------------------------
+		// SKConstraint, SKReachConstraints
+		// ------------------------------
+		constraints: [SKConstraint]?			// get/set the list of constraints to apply to the node
+		reachConstraints: SKReachConstraints?	// get/set the reach constraints for inverse kinematics to apply to the node
+		
+		
+		// ------------------------------
 		// SKPhysicsBody ???
 		// ------------------------------
 		physicsBody: SKPhysicsBody?
-		
-		
-		// ------------------------------
-		// SKConstraint, SKReachConstraints ???
-		// ------------------------------
-		constraints: [SKConstraint]?
-		reachConstraints: SKReachConstraints?
 		
 		
 		// ------------------------------

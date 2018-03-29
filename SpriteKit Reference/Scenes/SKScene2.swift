@@ -66,5 +66,60 @@ class AnotherSKScene: SKScene {
 		yellowBox.constraints = [ distanceConstraint ]
 		
 		
+		// Testing inverse kinematics (reach constraints + reach action)
+		// ------------------------------
+		
+		// Define settings
+		let jointRadius: CGFloat = 4
+		let armSize = CGSize(width: 12, height: 80)
+		let armRect = CGRect(x: -armSize.width/2, y: 0, width: armSize.width, height: armSize.height)
+		let jointAngleLimit: CGFloat = 90 * CGFloat.pi / 180
+		let reachTargetNode = redBox
+		let reachSpeed = 3.0
+		
+		// Create objects
+		let shoulder    = SKShapeNode(circleOfRadius: jointRadius)
+		let elbow       = SKShapeNode(circleOfRadius: jointRadius)
+		let wrist       = SKShapeNode(circleOfRadius: jointRadius)
+		let endEffector = SKShapeNode(circleOfRadius: jointRadius)
+		let upperArm  = SKShapeNode(rect: armRect)
+		let middleArm = SKShapeNode(rect: armRect)
+		let lowerArm  = SKShapeNode(rect: armRect)
+		endEffector.strokeColor = .green
+		
+		// Build node tree
+		self.addChild(shoulder)
+		shoulder.addChild(upperArm)
+		upperArm.addChild(elbow)
+		elbow.addChild(middleArm)
+		middleArm.addChild(wrist)
+		wrist.addChild(lowerArm)
+		lowerArm.addChild(endEffector)
+		
+		// Position nodes
+		shoulder.position    = sceneCenter
+		upperArm.position    = CGPoint.zero
+		elbow.position       = CGPoint(x: 0, y: armSize.height)
+		middleArm.position   = CGPoint.zero
+		wrist.position       = CGPoint(x: 0, y: armSize.height)
+		lowerArm.position    = CGPoint.zero
+		endEffector.position = CGPoint(x: 0, y: armSize.height)
+		
+		// Create and apply reach constraints
+		let jointConstraint = SKReachConstraints(lowerAngleLimit: 0, upperAngleLimit: jointAngleLimit)
+		let armConstraint = SKReachConstraints(lowerAngleLimit: 0, upperAngleLimit: 0)
+		shoulder.reachConstraints = jointConstraint
+		elbow.reachConstraints = jointConstraint
+		wrist.reachConstraints = jointConstraint
+		endEffector.reachConstraints = jointConstraint
+		upperArm.reachConstraints = armConstraint
+		middleArm.reachConstraints = armConstraint
+		lowerArm.reachConstraints = armConstraint
+		
+		// Run 'reach' action
+		let reachAction = SKAction.reach(to: reachTargetNode, rootNode: shoulder, duration: reachSpeed)
+		endEffector.run(reachAction)
+		
+		
 	}
 }

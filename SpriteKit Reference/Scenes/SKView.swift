@@ -14,7 +14,7 @@ class MySKView: SKView, SKViewDelegate {
 	// [custom properties]
 	var scene1: MySKScene!
 	var scene2: AnotherSKScene!
-	var sceneTransition: SKTransition! // ???
+	var sceneTransition: SKTransition!
 	
 	// Initialize
 	override func didMoveToWindow() {

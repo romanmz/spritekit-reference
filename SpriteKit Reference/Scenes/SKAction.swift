@@ -105,6 +105,16 @@ class MySKAction: SKAction {
 	colorize(withColorBlendFactor:duration:)
 	
 	
+	// Type methods - Initializers (to be used on nodes with reach constraints / inverse kinematics)
+	// ------------------------------
+	
+	// Rotate each node in a tree to make them reach a given target
+	reach(to:rootNode:duration:)				// Target a SKNode element. Not reversible
+	reach(to:rootNode:velocity:)
+	reach(to:rootNode:duration:)				// Target a CGPoint. Not reversible
+	reach(to:rootNode:velocity:)
+	
+	
 	// Type methods - Initializers (to be used on physics bodies) ???
 	// ------------------------------
 	applyForce(_:duration:)
@@ -148,14 +158,6 @@ class MySKAction: SKAction {
 	changeReverb(by:duration:)
 	stereoPan(to:duration:)						// Animates the stereo panning value to the given value. Not reversible
 	stereoPan(by:duration:)						// Same but relative to the current value. Is reversible
-	
-	
-	// Type methods - Initializers (to be used on nodes with constraints) ???
-	// ------------------------------
-	reach(to:rootNode:duration:)				// with 'to' as CGPoint
-	reach(to:rootNode:velocity:)
-	reach(to:rootNode:duration:)				// with 'to' as SKNode
-	reach(to:rootNode:velocity:)
 	
 	
 	// Type methods - Creating custom actions
