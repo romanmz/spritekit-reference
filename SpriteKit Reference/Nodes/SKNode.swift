@@ -134,6 +134,13 @@ class MySKNode: SKNode {
 		
 		
 		// ------------------------------
+		// Pr - SKWarpable (only on SKSpriteNode and SKEffectNode)
+		// ------------------------------
+		warpGeometry: SKWarpGeometry?			// get/set the warp geometry object to apply to the node
+		subdivisionLevels: Int					// get/set the maximum number of subdivision iterations used to generate the final vertices (???)
+		
+		
+		// ------------------------------
 		// SKPhysicsBody ???
 		// ------------------------------
 		physicsBody: SKPhysicsBody?

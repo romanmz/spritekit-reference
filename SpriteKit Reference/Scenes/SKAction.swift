@@ -115,6 +115,15 @@ class MySKAction: SKAction {
 	reach(to:rootNode:velocity:)
 	
 	
+	// Type methods - Initializers (to be used on nodes with warp geometries)
+	// ------------------------------
+	
+	// Warp nodes
+	warp(to:duration:)							// Apply a single warp geometry
+	animate(withWarps:times:)					// Apply multiple warp geometries sequentially, indicating the time at which each one should be completed
+	animate(withWarps:times:restore:)			// If 'restore' is true, the node will revert back to its original geometry
+	
+	
 	// Type methods - Initializers (to be used on physics bodies) ???
 	// ------------------------------
 	applyForce(_:duration:)
@@ -131,13 +140,6 @@ class MySKAction: SKAction {
 	strength(by:duration:)
 	falloff(to:duration:)
 	falloff(by:duration:)
-	
-	
-	// Type methods - Initializers (to be used on warping geometries) ???
-	// ------------------------------
-	animate(withWarps:times:)
-	animate(withWarps:times:restore:)
-	warp(to:duration:)
 	
 	
 	// Type methods - Initializers (to be used on audio nodes) ???

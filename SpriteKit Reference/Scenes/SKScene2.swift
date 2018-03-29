@@ -121,5 +121,23 @@ class AnotherSKScene: SKScene {
 		endEffector.run(reachAction)
 		
 		
+		// Testing geometry warping
+		// ------------------------------
+		
+		// Create sprite node to be warped
+		let warpedNode = MySKSpriteNode(test: "test")
+		warpedNode.position = CGPoint(x: 100, y: 200)
+		addChild(warpedNode)
+		
+		// Define warping settings
+		let warpReset = SKWarpGeometryGrid(columns: 2, rows: 2)
+		let warpSqueeze = MySKWarpGeometryGrid(test: "test")
+		
+		// Apply warping
+		let warpAction = SKAction.animate(withWarps: [warpSqueeze, warpReset, warpSqueeze], times: [2, 4, 6], restore: true)
+		warpedNode.warpGeometry = warpReset
+		warpedNode.run(warpAction!)
+		
+		
 	}
 }
