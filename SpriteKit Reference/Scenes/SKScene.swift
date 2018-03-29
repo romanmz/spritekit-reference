@@ -39,10 +39,16 @@ class MySKScene: SKScene {
 	// ------------------------------
 	func determineVisibleRegion() {
 		
-		// You can add an optional SKCameraNode object to determine the region of the scene to be rendered, the camera node must also be added as a child node for this to work
-		// let cameraNode = SKCameraNode() ???
-		// addChild(cameraNode)
-		// camera = cameraNode
+		// Set the SKCameraNode object to use to render the scene (optional)
+		let cameraNode = SKCameraNode()
+		cameraNode.position = CGPoint(x: size.width/2, y: size.height/2)
+		addChild(cameraNode)
+		camera = cameraNode
+		// [test camera movements]
+		let cameraMove = SKAction.moveBy(x: 0, y: 25, duration: 5)
+		let cameraRotate = SKAction.rotate(byAngle: CGFloat.pi / 4, duration: 5)
+		let cameraScale = SKAction.scale(by: 1.2, duration: 5)
+		cameraNode.run( SKAction.sequence([ cameraMove, cameraRotate, cameraScale ]) )
 		
 		// If there's no camera, then the anchorPoint and size properties will be used to determine the region to render
 		print("scene size: \(size)")				// The base scene size, if changed manually or automatically it will trigger the 'didChangeSize' method
