@@ -124,6 +124,26 @@ class MySKAction: SKAction {
 	animate(withWarps:times:restore:)			// If 'restore' is true, the node will revert back to its original geometry
 	
 	
+	// Type methods - Initializers (to be used on audio nodes)
+	// ------------------------------
+	playSoundFileNamed(_:waitForCompletion:)	// Play a sound file, if 'waitForCompletion' is true the duration is the same as the audio playback, otherwise is instantaneous
+	play()										// Plays the audio node. Not reversible
+	pause()										// Pauses the audio node.
+	stop()										// Stops the audio node.
+	changePlaybackRate(by:duration:)			// Relative playback speed. Is reversible. Value of 1.0 represents normal speed
+	changePlaybackRate(to:duration:)			// Absolute playback speed. Not reversible
+	changeVolume(by:duration:)					// Relative volume level. Is reversible. 0.0 is silence, 1.0 is max volume
+	changeVolume(to:duration:)					// Absolute volume level. Not reversible
+	changeObstruction(by:duration:)				// Animate the obstruction level (???)
+	changeObstruction(to:duration:)
+	changeOcclusion(by:duration:)				// Animate the occlusion level (???)
+	changeOcclusion(to:duration:)
+	changeReverb(by:duration:)					// Animate the reverb level (???)
+	changeReverb(to:duration:)
+	stereoPan(by:duration:)						// Relative panning value. Is reversible. -1.0 is left only, +1.0 is right only
+	stereoPan(to:duration:)						// Absolute panning value. Not reversible
+	
+	
 	// Type methods - Initializers (to be used on physics bodies) ???
 	// ------------------------------
 	applyForce(_:duration:)
@@ -140,26 +160,6 @@ class MySKAction: SKAction {
 	strength(by:duration:)
 	falloff(to:duration:)
 	falloff(by:duration:)
-	
-	
-	// Type methods - Initializers (to be used on audio nodes) ???
-	// ------------------------------
-	playSoundFileNamed(_:waitForCompletion:)	// Play a sound file, if 'waitForCompletion' is true the duration is the same as the audio playback, otherwise is instantaneous
-	play()										// Plays the audio node. Not reversible
-	pause()										// Pauses the audio node.
-	stop()										// Stops the audio node.
-	changePlaybackRate(to:duration:)
-	changePlaybackRate(by:duration:)
-	changeVolume(to:duration:)					// Changes the volume of the node to the given value. Not reversible
-	changeVolume(by:duration:)					// Same but relative to the current volume. Is reversible
-	changeObstruction(to:duration:)
-	changeObstruction(by:duration:)
-	changeOcclusion(to:duration:)
-	changeOcclusion(by:duration:)
-	changeReverb(to:duration:)
-	changeReverb(by:duration:)
-	stereoPan(to:duration:)						// Animates the stereo panning value to the given value. Not reversible
-	stereoPan(by:duration:)						// Same but relative to the current value. Is reversible
 	
 	
 	// Type methods - Creating custom actions

@@ -107,14 +107,14 @@ class MySKScene: SKScene {
 	// ------------------------------
 	func addingAudio() {
 		/*
-		- The simplest way to add audio is to add a child SKAudioNode ???
+		// The simplest way to add audio is to add a child SKAudioNode
 		addChild( SKAudioNode(fileNamed: "drums.mp3") )
 		
-		- By default, the origin of the generated audio is the scene's origin point, to change this use an existing SKNode as the 'listener' property
+		// By default, the origin of audio nodes are relative to the scene's origin point, to make them relative to a particular node, assign it to the 'listener' property
 		listener: SKNode?
 		
-		- For more advanced functionality, an AVAudioEngine instance is automatically made available.
-		Example for lowering the volume and then pausing the audio:
+		// For more advanced functionality, an AVAudioEngine instance is automatically made available
+		// Example for lowering the volume and then pausing the audio:
 		audioEngine.mainMixerNode.outputVolume = 0.2
 		audioEngine.pause()
 		*/

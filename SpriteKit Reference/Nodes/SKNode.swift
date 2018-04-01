@@ -319,6 +319,12 @@ class MySKNode: SKNode {
 		let tileMapNode = MySKTileMapNode(test: "test")
 		tileMapNode.zPosition = -10
 		scene.addChild(tileMapNode)
+		
+		// test audio node
+		let audioNode = MySKAudioNode(test: "test")
+		scene.addChild(audioNode)
+		audioNode.run( SKAction.play() )
+		
 	}
 	func destroyNodes() {
 		removeAllActions()
