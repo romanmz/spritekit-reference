@@ -325,6 +325,11 @@ class MySKNode: SKNode {
 		scene.addChild(audioNode)
 		audioNode.run( SKAction.play() )
 		
+		// test particle emitter node
+		let emitterNode = MySKEmitterNode(test: "test")
+		emitterNode.position = CGPoint(x: 100, y: 200)
+		scene.addChild(emitterNode)
+		
 	}
 	func destroyNodes() {
 		removeAllActions()
