@@ -169,7 +169,7 @@ class ViewController: UIViewController {
 	// ***** SKUniform
 	
 	
-	// Integration
+	// Integrations
 	// ------------------------------
 	// ***** SKEffectNode	(can apply SKWarpGeometry or Core Image effects to the children of the node)
 	// ***** SK3DNode		(renders a SceneKit scene as a 2D image)
