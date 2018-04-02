@@ -176,8 +176,8 @@ class ViewController: UIViewController {
 	
 	// ???
 	// ------------------------------
-	// ***** SKRenderer
 	// ***** SKTransformNode
+	// ***** SKRenderer		(allows integration with Metal)
 	
 	
 	// Reference
