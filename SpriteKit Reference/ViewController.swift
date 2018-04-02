@@ -144,11 +144,12 @@ class ViewController: UIViewController {
 	// ***** SKReachConstraints
 	
 	
-	// Warping Nodes
+	// Transforming Nodes
 	// ------------------------------
 	// ***** SKWarpGeometry
 	// ***** SKWarpGeometryGrid
 	// ***** Pr - SKWarpable
+	// ***** SKTransformNode
 	
 	
 	// Cameras, Lightning and Audio
@@ -172,11 +173,6 @@ class ViewController: UIViewController {
 	// ------------------------------
 	// ***** SKEffectNode	(can apply SKWarpGeometry or Core Image effects to the children of the node)
 	// ***** SK3DNode		(renders a SceneKit scene as a 2D image)
-	
-	
-	// ???
-	// ------------------------------
-	// ***** SKTransformNode
 	// ***** SKRenderer		(allows integration with Metal)
 	
 	

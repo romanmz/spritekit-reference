@@ -139,5 +139,14 @@ class AnotherSKScene: SKScene {
 		warpedNode.run(warpAction!)
 		
 		
+		// Testing transform node
+		// ------------------------------
+		let transformedNode = SKSpriteNode(color: .blue, size: CGSize(width: 20, height: 20))
+		let transformNode = MySKTransformNode(test: "test")
+		transformNode.position = CGPoint(x: 50, y: 100)
+		addChild(transformNode)
+		transformNode.addChild(transformedNode)
+		
+		
 	}
 }
