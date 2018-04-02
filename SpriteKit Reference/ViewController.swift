@@ -150,6 +150,7 @@ class ViewController: UIViewController {
 	// ***** SKWarpGeometryGrid
 	// ***** Pr - SKWarpable
 	// ***** SKTransformNode
+	// ***** SKEffectNode
 	
 	
 	// Cameras, Lightning and Audio
@@ -171,9 +172,18 @@ class ViewController: UIViewController {
 	
 	// Integrations
 	// ------------------------------
-	// ***** SKEffectNode	(can apply SKWarpGeometry or Core Image effects to the children of the node)
 	// ***** SK3DNode		(renders a SceneKit scene as a 2D image)
 	// ***** SKRenderer		(allows integration with Metal)
+	
+	
+	// Related Frameworks ???
+	// ------------------------------
+	// SceneKit
+	// Metal
+	// Core Graphics
+	// Core Image
+	// Quartz 2D image (CGImage)
+	// OpenGL ES 2.0
 	
 	
 	// Reference

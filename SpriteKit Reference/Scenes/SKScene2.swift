@@ -148,5 +148,14 @@ class AnotherSKScene: SKScene {
 		transformNode.addChild(transformedNode)
 		
 		
+		// Testing effects node
+		// ------------------------------
+		let effectTestNode = SKSpriteNode(color: .green, size: CGSize(width: 20, height: 20))
+		let effectNode = MySKEffectNode(test: "test")
+		effectNode.position = CGPoint(x: 100, y: 100)
+		addChild(effectNode)
+		effectNode.addChild(effectTestNode)
+		
+		
 	}
 }
