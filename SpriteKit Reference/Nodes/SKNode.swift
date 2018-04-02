@@ -330,6 +330,11 @@ class MySKNode: SKNode {
 		emitterNode.position = CGPoint(x: 100, y: 200)
 		scene.addChild(emitterNode)
 		
+		// test particle emitter node (from a .sks file)
+		let emitterNode2 = SKEmitterNode(fileNamed: "sample-particles.sks")
+		emitterNode2?.position = CGPoint(x: 150, y: 200)
+		scene.addChild(emitterNode2!)
+		
 	}
 	func destroyNodes() {
 		removeAllActions()

@@ -15,6 +15,13 @@ class MySKEmitterNode: SKEmitterNode {
 	// Particle properties are always relative to the emitter node when being created, but for their subsequenet animation you can decide which node to use as reference
 	
 	
+	/*
+	// Init shortcuts
+	// ------------------------------
+	init(fileNamed:)						// Creates the emitter node based on a .sks file
+	*/
+	
+	
 	// [custom initializer to avoid overriding the default ones]
 	convenience init(test: String) {
 		self.init()
