@@ -20,6 +20,10 @@ class AnotherSKScene: SKScene {
 		let sceneCenter = CGPoint(x: size.width/2, y: size.height/2)
 		backgroundColor = .lightGray
 		
+		
+		// Testing physics world and bodies
+		// ------------------------------
+		
 		// Setup physics world
 		physicsWorld.gravity = CGVector(dx: 0, dy: 0)
 		let physicsNoise = SKFieldNode.noiseField(withSmoothness: 1, animationSpeed: 0.1)
@@ -40,15 +44,13 @@ class AnotherSKScene: SKScene {
 		redBox.position = CGPoint(x: 10, y: sceneCenter.y)
 		addChild(redBox)
 		
-		// Add yellow box
-		let yellowBox = SKSpriteNode(color: .yellow, size: CGSize(width: 20, height: 20))
-		let yellowBoxPhysics = SKPhysicsBody(rectangleOf: yellowBox.frame.size)
-		yellowBox.physicsBody = yellowBoxPhysics
-		addChild(yellowBox)
-		
 		
 		// Testing constraints
 		// ------------------------------
+		
+		// Add yellow box
+		let yellowBox = SKSpriteNode(color: .yellow, size: CGSize(width: 20, height: 20))
+		addChild(yellowBox)
 		
 		// Add position constraints
 		let rangeX = SKRange(lowerLimit: sceneCenter.x - 50, upperLimit: sceneCenter.x + 50)
