@@ -141,7 +141,7 @@ class MySKNode: SKNode {
 		
 		
 		// ------------------------------
-		// SKPhysicsBody ???
+		// SKPhysicsBody
 		// ------------------------------
 		physicsBody: SKPhysicsBody?
 		

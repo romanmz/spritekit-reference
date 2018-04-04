@@ -14,7 +14,7 @@ class MySKWarpGeometryGrid: SKWarpGeometryGrid {
 	
 	
 	/*
-	// Initializers
+	// Init shortcuts
 	// ------------------------------
 	init(columns:rows:sourcePositions:destinationPositions:)	// Set the number of vertices, their normalized inital positions, and their target positions
 	init(columns:rows:)											// Set the number of vertices, with both their initial and target positions evenly spaced (no warping occurs)

@@ -121,9 +121,9 @@ class MySKScene: SKScene {
 	}
 	
 	
+	// Physics simulations
 	// ------------------------------
-	// SKPhysicsWorld ???
-	// ------------------------------
+	// Each scene has a built-in physics world object you can use to manage the physics simulation
 	func setupPhysicsWorld() {
 		// physicsWorld: SKPhysicsWorld
 	}

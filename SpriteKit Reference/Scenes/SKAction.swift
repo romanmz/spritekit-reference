@@ -105,25 +105,6 @@ class MySKAction: SKAction {
 	colorize(withColorBlendFactor:duration:)
 	
 	
-	// Type methods - Initializers (to be used on nodes with reach constraints / inverse kinematics)
-	// ------------------------------
-	
-	// Rotate each node in a tree to make them reach a given target
-	reach(to:rootNode:duration:)				// Target a SKNode element. Not reversible
-	reach(to:rootNode:velocity:)
-	reach(to:rootNode:duration:)				// Target a CGPoint. Not reversible
-	reach(to:rootNode:velocity:)
-	
-	
-	// Type methods - Initializers (to be used on nodes with warp geometries)
-	// ------------------------------
-	
-	// Warp nodes
-	warp(to:duration:)							// Apply a single warp geometry
-	animate(withWarps:times:)					// Apply multiple warp geometries sequentially, indicating the time at which each one should be completed
-	animate(withWarps:times:restore:)			// If 'restore' is true, the node will revert back to its original geometry
-	
-	
 	// Type methods - Initializers (to be used on audio nodes)
 	// ------------------------------
 	playSoundFileNamed(_:waitForCompletion:)	// Play a sound file, if 'waitForCompletion' is true the duration is the same as the audio playback, otherwise is instantaneous
@@ -144,18 +125,45 @@ class MySKAction: SKAction {
 	stereoPan(to:duration:)						// Absolute panning value. Not reversible
 	
 	
-	// Type methods - Initializers (to be used on physics bodies) ???
+	// Type methods - Initializers (to be used on nodes with reach constraints / inverse kinematics)
 	// ------------------------------
-	applyForce(_:duration:)
+	
+	// Rotate each node in a tree to make them reach a given target
+	reach(to:rootNode:duration:)				// Target a SKNode element. Not reversible
+	reach(to:rootNode:velocity:)
+	reach(to:rootNode:duration:)				// Target a CGPoint. Not reversible
+	reach(to:rootNode:velocity:)
+	
+	
+	// Type methods - Initializers (to be used on nodes with warp geometries)
+	// ------------------------------
+	
+	// Warp nodes
+	warp(to:duration:)							// Apply a single warp geometry
+	animate(withWarps:times:)					// Apply multiple warp geometries sequentially, indicating the time at which each one should be completed
+	animate(withWarps:times:restore:)			// If 'restore' is true, the node will revert back to its original geometry
+	
+	
+	// Type methods - Initializers (to be used on physics bodies)
+	// ------------------------------
+	
+	// Apply forces and impulses
+	applyForce(_:duration:)						// Force is applied continuously for the duration of the action. Is reversible
 	applyTorque(_:duration:)
 	applyForce(_:at:duration:)
-	applyImpulse(_:duration:)
+	applyImpulse(_:duration:)					// Force is spread out for the duration of the action. Is reversible
 	applyAngularImpulse(_:duration:)
 	applyImpulse(_:at:duration:)
-	changeCharge(to:duration:)
-	changeCharge(by:duration:)
-	changeMass(to:duration:)
-	changeMass(by:duration:)
+	
+	// Updating properties
+	changeCharge(by:duration:)					// Relative charge. Is reversible
+	changeCharge(to:duration:)					// Absolute charge. Not reversible
+	changeMass(by:duration:)					// Relative mass. Is reversible
+	changeMass(to:duration:)					// Absolute mass. Is reversible
+	
+	
+	// Type methods - Initializers (to be used on physics fields)
+	// ------------------------------
 	strength(to:duration:)
 	strength(by:duration:)
 	falloff(to:duration:)
