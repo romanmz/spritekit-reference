@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class MySKPhysicsWorld: SKPhysicsWorld {
+class MySKPhysicsWorld: SKPhysicsWorld, SKPhysicsContactDelegate {
 	// Defines the physics simulation settings for a scene
 	// You don't really have to create a physics world object manually, just work with the existing physicsWorld property on scene objects
 	
@@ -23,7 +23,6 @@ class MySKPhysicsWorld: SKPhysicsWorld {
 		// ------------------------------
 		gravity = CGVector(dx: 0, dy: 9.8)	// get/set the gravitaional acceleration applied to physics bodies as meters per second. Defaults to (0.0, 9.8)
 		speed = 1.0							// get/set the speed at which the simulation should run. 1.0 is normal speed, 2.0 would be twice, 0.0 will pause it. Defaults to 1.0
-		contactDelegate = nil				// get/set the object to use as a delegate to handle collisions between physics bodies ???
 		
 		
 		// Adding SKPhysicsJoints ???
@@ -50,5 +49,14 @@ class MySKPhysicsWorld: SKPhysicsWorld {
 											// this is based on a hypotetical physics body placed on that point, with a mass of 1, no charge, no velocity, and affected by all fields
 		
 		
+		// Pr - SKPhysicsContactDelegate
+		// ------------------------------
+		// You can specify a delegate object to handle collisions between physics bodies
+		//
+		contactDelegate = self
 	}
+	func didBegin(_ contact: SKPhysicsContact) {}
+	func didEnd(_ contact: SKPhysicsContact) {}
+	
+	
 }
