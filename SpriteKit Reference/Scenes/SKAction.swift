@@ -164,10 +164,10 @@ class MySKAction: SKAction {
 	
 	// Type methods - Initializers (to be used on physics fields)
 	// ------------------------------
-	strength(to:duration:)
-	strength(by:duration:)
-	falloff(to:duration:)
-	falloff(by:duration:)
+	strength(by:duration:)						// Relative strength. Is reversible
+	strength(to:duration:)						// Absolute strength. Not reversible
+	falloff(by:duration:)						// Relative falloff. Is reversible
+	falloff(to:duration:)						// Absolute falloff. Not reversible
 	
 	
 	// Type methods - Creating custom actions
