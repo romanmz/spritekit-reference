@@ -25,7 +25,7 @@ class MySKPhysicsWorld: SKPhysicsWorld, SKPhysicsContactDelegate {
 		speed = 1.0							// get/set the speed at which the simulation should run. 1.0 is normal speed, 2.0 would be twice, 0.0 will pause it. Defaults to 1.0
 		
 		
-		// Adding SKPhysicsJoints ???
+		// Adding physics joints
 		// ------------------------------
 		// add(_:)							// adds a joint to the physics simulation
 		// remove(_:)						// removes a specific joint from the simulation

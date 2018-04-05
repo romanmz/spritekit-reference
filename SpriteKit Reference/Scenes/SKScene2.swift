@@ -47,6 +47,29 @@ class AnotherSKScene: SKScene {
 		addChild(redBox)
 		
 		
+		// Testing physics joints
+		// ------------------------------
+		let fixedNode1 = SKSpriteNode(color: .cyan, size: CGSize(width: 10, height: 10))
+		let fixedNode1Physics = SKPhysicsBody(rectangleOf: fixedNode1.size)
+		fixedNode1Physics.density = 1000
+		fixedNode1Physics.isDynamic = false
+		fixedNode1.physicsBody = fixedNode1Physics
+		fixedNode1.position = CGPoint(x: sceneCenter.x - 50, y: sceneCenter.y)
+		addChild(fixedNode1)
+		let fixedNode2 = SKSpriteNode(color: .cyan, size: CGSize(width: 10, height: 10))
+		let fixedNode2Physics = SKPhysicsBody(rectangleOf: fixedNode2.size)
+		fixedNode2Physics.density = 1000
+		fixedNode2.physicsBody = fixedNode2Physics
+		fixedNode2.position = CGPoint(x: sceneCenter.x + 50, y: sceneCenter.y)
+		addChild(fixedNode2)
+		let physicsJointAnchor1 = CGPoint(x: sceneCenter.x, y: sceneCenter.y - 50)
+		let physicsJointAnchor2 = CGPoint(x: sceneCenter.x, y: sceneCenter.y + 50)
+		let physicsJoint = SKPhysicsJointSpring.joint(withBodyA: fixedNode1Physics, bodyB: fixedNode2Physics, anchorA: physicsJointAnchor1, anchorB: physicsJointAnchor2)
+		physicsJoint.frequency = 1
+		physicsJoint.damping = 0
+		physicsWorld.add(physicsJoint)
+		
+		
 		// Testing constraints
 		// ------------------------------
 		
