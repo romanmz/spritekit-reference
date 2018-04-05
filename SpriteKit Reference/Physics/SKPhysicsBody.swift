@@ -98,8 +98,8 @@ class MySKPhysicsBody: SKPhysicsBody {
 		
 		// Applying force fields
 		// ------------------------------
-		// fieldBitMask				// get/set the physics field categories that can affect this body
-		// charge					// get/set the electrical charge of the body (used only by electromagnetic fields)
+		// fieldBitMask				// get/set the physics field categories that can affect this body. Defaults to all 32 bits
+		// charge					// get/set the electrical charge of the body (used only by electromagnetic fields). Defaults to 0
 		
 		
 		// Contacts and collisions

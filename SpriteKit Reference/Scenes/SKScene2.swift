@@ -26,8 +26,10 @@ class AnotherSKScene: SKScene {
 		
 		// Setup physics world
 		physicsWorld.gravity = CGVector(dx: 0, dy: 0)
-		let physicsNoise = SKFieldNode.noiseField(withSmoothness: 1, animationSpeed: 0.1)
-		addChild(physicsNoise)
+		
+		// Create physics field node
+		let fieldNode = SKFieldNode.noiseField(withSmoothness: 1.0, animationSpeed: 0.1)
+		addChild(fieldNode)
 		
 		// Add purple box
 		let purpleBox = SKSpriteNode(color: .purple, size: CGSize(width: 50, height: 50))
