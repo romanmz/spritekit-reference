@@ -10,6 +10,9 @@ import UIKit
 import SpriteKit
 
 class MySKScene: SKScene {
+	// Scenes are each of the different types of screens or gameplay stages that the game presents
+	// They are loaded from within a SKView as required, an only one scene can be presented at a time
+	// It is actually a subclass of SKNode, but it's specifically set up to be the top node and manage the general scene settings
 	
 	// [custom properties]
 	var baseNode: MySKNode!

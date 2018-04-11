@@ -10,6 +10,28 @@ import UIKit
 import SpriteKit
 
 class MySKView: SKView, SKViewDelegate {
+	// Represents the root object for a game, since it is a subclass of UIView it can be added anywhere a regular view can,
+	// but most of the time you'll want to make it your root view and take up the whole screen. You can define it…
+	// 1. As the root view
+	//	- Set the root view as SKView on the storyboard
+	//	- Then in the controller, cast the default 'view' property as SKView
+	//		(whenever needed, as a computed property, or in a function)
+	// 2. As subview
+	//	- Leave root view as the default UIView
+	//	- Create a separate SKView in the controller
+	//	- Add it as a subview of the root view
+	
+	
+	// Related Frameworks ???
+	// ------------------------------
+	// SceneKit
+	// Metal
+	// Core Animation
+	// Core Graphics
+	// Core Image
+	// Quartz 2D image (CGImage)
+	// OpenGL ES 2.0
+	
 	
 	// [custom properties]
 	var scene1: MySKScene!
