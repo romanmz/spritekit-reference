@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3027A510204E9DE200BBF74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A50F204E9DE200BBF74D /* AppDelegate.swift */; };
+		3027A512204E9DE200BBF74D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A511204E9DE200BBF74D /* ViewController.swift */; };
+		3027A515204E9DE200BBF74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3027A513204E9DE200BBF74D /* Main.storyboard */; };
+		3027A517204E9DE200BBF74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3027A516204E9DE200BBF74D /* Assets.xcassets */; };
+		3027A51A204E9DE200BBF74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3027A518204E9DE200BBF74D /* LaunchScreen.storyboard */; };
+		3027A525204E9F1300BBF74D /* SKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A524204E9F1300BBF74D /* SKScene.swift */; };
+		3027A527204EAB1200BBF74D /* SKScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A526204EAB1200BBF74D /* SKScene2.swift */; };
+		3027A5A5205006A600BBF74D /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A5A4205006A600BBF74D /* SKView.swift */; };
+		3027A5A820528FAC00BBF74D /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A5A720528FAC00BBF74D /* SKNode.swift */; };
+		303704912074E1790009E935 /* SKPhysicsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303704902074E1790009E935 /* SKPhysicsContact.swift */; };
+		30370493207504DD0009E935 /* SKFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30370492207504DD0009E935 /* SKFieldNode.swift */; };
+		304194BF20610E970024CB79 /* sample-tile-set.sks in Resources */ = {isa = PBXBuildFile; fileRef = 304194BE20610E970024CB79 /* sample-tile-set.sks */; };
+		304194C52063A80F0024CB79 /* SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304194C42063A80F0024CB79 /* SKAction.swift */; };
+		304FA3C0205651490070B46C /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304FA3BF205651490070B46C /* SKSpriteNode.swift */; };
+		3060A904205CA4DB00376DD6 /* SKLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A903205CA4DB00376DD6 /* SKLabelNode.swift */; };
+		3060A906205CACC000376DD6 /* SKVideoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A905205CACC000376DD6 /* SKVideoNode.swift */; };
+		3060A90A205CE38300376DD6 /* sample-video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3060A909205CE38300376DD6 /* sample-video.mp4 */; };
+		3060A90C205CE48800376DD6 /* SKCropNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A90B205CE48800376DD6 /* SKCropNode.swift */; };
+		3060A90E205CE7D000376DD6 /* SKReferenceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A90D205CE7D000376DD6 /* SKReferenceNode.swift */; };
+		3060A910205CEA0500376DD6 /* sample-reference-node.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3060A90F205CEA0400376DD6 /* sample-reference-node.sks */; };
+		3060A913205CF65900376DD6 /* SKTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A912205CF65900376DD6 /* SKTexture.swift */; };
+		3060A915205D1CD600376DD6 /* SKMutableTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A914205D1CD600376DD6 /* SKMutableTexture.swift */; };
+		3060A917205D213800376DD6 /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A916205D213800376DD6 /* SKTextureAtlas.swift */; };
+		3060A91A205DD24600376DD6 /* SKTileMapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A919205DD24600376DD6 /* SKTileMapNode.swift */; };
+		3060A91C205DD8A600376DD6 /* SKTileDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A91B205DD8A600376DD6 /* SKTileDefinition.swift */; };
+		3060A91E205DE36E00376DD6 /* SKTileGroupRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A91D205DE36E00376DD6 /* SKTileGroupRule.swift */; };
+		3060A920205DE6AE00376DD6 /* SKTileGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A91F205DE6AE00376DD6 /* SKTileGroup.swift */; };
+		3060A926205DEE6E00376DD6 /* SKTileSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A925205DEE6E00376DD6 /* SKTileSet.swift */; };
+		3085FCA120569C9500813A53 /* SKLightNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085FCA020569C9500813A53 /* SKLightNode.swift */; };
+		3088A9B3206CF6DC00879185 /* SKWarpGeometryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088A9B2206CF6DC00879185 /* SKWarpGeometryGrid.swift */; };
+		3088A9B5206D06F400879185 /* SKCameraNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088A9B4206D06F400879185 /* SKCameraNode.swift */; };
+		3088A9B7206D0D5C00879185 /* SKAudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088A9B6206D0D5C00879185 /* SKAudioNode.swift */; };
+		308DDA20207635C500EBE1E6 /* SKRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA1F207635C500EBE1E6 /* SKRegion.swift */; };
+		308DDA2220765B3E00EBE1E6 /* SKPhysicsJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA2120765B3E00EBE1E6 /* SKPhysicsJoint.swift */; };
+		308DDA2420765EF800EBE1E6 /* SKPhysicsJointFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA2320765EF800EBE1E6 /* SKPhysicsJointFixed.swift */; };
+		308DDA26207662E300EBE1E6 /* SKPhysicsJointLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA25207662E300EBE1E6 /* SKPhysicsJointLimit.swift */; };
+		308DDA28207664F100EBE1E6 /* SKPhysicsJointPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA27207664F100EBE1E6 /* SKPhysicsJointPin.swift */; };
+		308DDA2A2076686A00EBE1E6 /* SKPhysicsJointSliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA292076686A00EBE1E6 /* SKPhysicsJointSliding.swift */; };
+		308DDA2C20766A0000EBE1E6 /* SKPhysicsJointSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDA2B20766A0000EBE1E6 /* SKPhysicsJointSpring.swift */; };
+		308DDC412067B72200733146 /* sample-action.sks in Resources */ = {isa = PBXBuildFile; fileRef = 308DDC402067B72200733146 /* sample-action.sks */; };
+		308DDC43206A5B9100733146 /* SKTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDC42206A5B9100733146 /* SKTransition.swift */; };
+		308DDC47206BA21700733146 /* SKConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDC46206BA21700733146 /* SKConstraint.swift */; };
+		308DDC49206BB3B200733146 /* SKRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDC48206BB3B200733146 /* SKRange.swift */; };
+		308DDC4B206BB63B00733146 /* SKReachConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DDC4A206BB63B00733146 /* SKReachConstraints.swift */; };
+		30A64FF0206CF3AF001BD6D3 /* SKWarpGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A64FEF206CF3AF001BD6D3 /* SKWarpGeometry.swift */; };
+		30D33BF82057CE0A00AED9F9 /* SKShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D33BF72057CE0A00AED9F9 /* SKShader.swift */; };
+		30D33BFA2057F64100AED9F9 /* SKUniform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D33BF92057F64100AED9F9 /* SKUniform.swift */; };
+		30D33BFC20591F5000AED9F9 /* SKAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D33BFB20591F5000AED9F9 /* SKAttribute.swift */; };
+		30D33C00205924BF00AED9F9 /* sample-opengl-shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 30D33BFF205924BF00AED9F9 /* sample-opengl-shader.fsh */; };
+		30D33C0220592B6300AED9F9 /* SKAttributeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D33C0120592B6300AED9F9 /* SKAttributeValue.swift */; };
+		30D33C0420594AF500AED9F9 /* SKShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D33C0320594AF500AED9F9 /* SKShapeNode.swift */; };
+		30F624C42070E0D500926766 /* sample-audio.caf in Resources */ = {isa = PBXBuildFile; fileRef = 30F624C32070E0D500926766 /* sample-audio.caf */; };
+		30F624C72071B6FC00926766 /* SKRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624C62071B6FC00926766 /* SKRenderer.swift */; };
+		30F624C92071B87700926766 /* SKTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624C82071B87700926766 /* SKTransformNode.swift */; };
+		30F624CB2071BF4500926766 /* SK3DNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624CA2071BF4500926766 /* SK3DNode.swift */; };
+		30F624CD2071C03700926766 /* SKEffectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624CC2071C03700926766 /* SKEffectNode.swift */; };
+		30F624CF2071CD9C00926766 /* SKEmitterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624CE2071CD9C00926766 /* SKEmitterNode.swift */; };
+		30F624D12071E34100926766 /* SKKeyframeSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624D02071E34100926766 /* SKKeyframeSequence.swift */; };
+		30F624D720721A2F00926766 /* sample-particles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30F624D620721A2F00926766 /* sample-particles.sks */; };
+		30F624DA207227DD00926766 /* SKPhysicsWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624D9207227DD00926766 /* SKPhysicsWorld.swift */; };
+		30F624DC2072306600926766 /* SKPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F624DB2072306600926766 /* SKPhysicsBody.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3027A50C204E9DE200BBF74D /* SpriteKit Reference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpriteKit Reference.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3027A50F204E9DE200BBF74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3027A511204E9DE200BBF74D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3027A514204E9DE200BBF74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3027A516204E9DE200BBF74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "SpriteKit Reference/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		3027A519204E9DE200BBF74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3027A51B204E9DE200BBF74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3027A524204E9F1300BBF74D /* SKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene.swift; sourceTree = "<group>"; };
+		3027A526204EAB1200BBF74D /* SKScene2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene2.swift; sourceTree = "<group>"; };
+		3027A5A4205006A600BBF74D /* SKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
+		3027A5A720528FAC00BBF74D /* SKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
+		303704902074E1790009E935 /* SKPhysicsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsContact.swift; sourceTree = "<group>"; };
+		30370492207504DD0009E935 /* SKFieldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKFieldNode.swift; sourceTree = "<group>"; };
+		304194BE20610E970024CB79 /* sample-tile-set.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "sample-tile-set.sks"; sourceTree = "<group>"; };
+		304194C42063A80F0024CB79 /* SKAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKAction.swift; sourceTree = "<group>"; };
+		304FA3BF205651490070B46C /* SKSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
+		3060A903205CA4DB00376DD6 /* SKLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLabelNode.swift; sourceTree = "<group>"; };
+		3060A905205CACC000376DD6 /* SKVideoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKVideoNode.swift; sourceTree = "<group>"; };
+		3060A909205CE38300376DD6 /* sample-video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sample-video.mp4"; sourceTree = "<group>"; };
+		3060A90B205CE48800376DD6 /* SKCropNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKCropNode.swift; sourceTree = "<group>"; };
+		3060A90D205CE7D000376DD6 /* SKReferenceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKReferenceNode.swift; sourceTree = "<group>"; };
+		3060A90F205CEA0400376DD6 /* sample-reference-node.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "sample-reference-node.sks"; sourceTree = "<group>"; };
+		3060A912205CF65900376DD6 /* SKTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTexture.swift; sourceTree = "<group>"; };
+		3060A914205D1CD600376DD6 /* SKMutableTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKMutableTexture.swift; sourceTree = "<group>"; };
+		3060A916205D213800376DD6 /* SKTextureAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
+		3060A919205DD24600376DD6 /* SKTileMapNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTileMapNode.swift; sourceTree = "<group>"; };
+		3060A91B205DD8A600376DD6 /* SKTileDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTileDefinition.swift; sourceTree = "<group>"; };
+		3060A91D205DE36E00376DD6 /* SKTileGroupRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTileGroupRule.swift; sourceTree = "<group>"; };
+		3060A91F205DE6AE00376DD6 /* SKTileGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTileGroup.swift; sourceTree = "<group>"; };
+		3060A925205DEE6E00376DD6 /* SKTileSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTileSet.swift; sourceTree = "<group>"; };
+		3085FCA020569C9500813A53 /* SKLightNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLightNode.swift; sourceTree = "<group>"; };
+		3088A9B2206CF6DC00879185 /* SKWarpGeometryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKWarpGeometryGrid.swift; sourceTree = "<group>"; };
+		3088A9B4206D06F400879185 /* SKCameraNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKCameraNode.swift; sourceTree = "<group>"; };
+		3088A9B6206D0D5C00879185 /* SKAudioNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKAudioNode.swift; sourceTree = "<group>"; };
+		308DDA1F207635C500EBE1E6 /* SKRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKRegion.swift; sourceTree = "<group>"; };
+		308DDA2120765B3E00EBE1E6 /* SKPhysicsJoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsJoint.swift; sourceTree = "<group>"; };
+		308DDA2320765EF800EBE1E6 /* SKPhysicsJointFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsJointFixed.swift; sourceTree = "<group>"; };
+		308DDA25207662E300EBE1E6 /* SKPhysicsJointLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsJointLimit.swift; sourceTree = "<group>"; };
+		308DDA27207664F100EBE1E6 /* SKPhysicsJointPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsJointPin.swift; sourceTree = "<group>"; };
+		308DDA292076686A00EBE1E6 /* SKPhysicsJointSliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsJointSliding.swift; sourceTree = "<group>"; };
+		308DDA2B20766A0000EBE1E6 /* SKPhysicsJointSpring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsJointSpring.swift; sourceTree = "<group>"; };
+		308DDC402067B72200733146 /* sample-action.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "sample-action.sks"; sourceTree = "<group>"; };
+		308DDC42206A5B9100733146 /* SKTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTransition.swift; sourceTree = "<group>"; };
+		308DDC46206BA21700733146 /* SKConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKConstraint.swift; sourceTree = "<group>"; };
+		308DDC48206BB3B200733146 /* SKRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKRange.swift; sourceTree = "<group>"; };
+		308DDC4A206BB63B00733146 /* SKReachConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKReachConstraints.swift; sourceTree = "<group>"; };
+		30A64FEF206CF3AF001BD6D3 /* SKWarpGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKWarpGeometry.swift; sourceTree = "<group>"; };
+		30D33BF72057CE0A00AED9F9 /* SKShader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKShader.swift; sourceTree = "<group>"; };
+		30D33BF92057F64100AED9F9 /* SKUniform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKUniform.swift; sourceTree = "<group>"; };
+		30D33BFB20591F5000AED9F9 /* SKAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKAttribute.swift; sourceTree = "<group>"; };
+		30D33BFF205924BF00AED9F9 /* sample-opengl-shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "sample-opengl-shader.fsh"; sourceTree = "<group>"; };
+		30D33C0120592B6300AED9F9 /* SKAttributeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKAttributeValue.swift; sourceTree = "<group>"; };
+		30D33C0320594AF500AED9F9 /* SKShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKShapeNode.swift; sourceTree = "<group>"; };
+		30F624C32070E0D500926766 /* sample-audio.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sample-audio.caf"; sourceTree = "<group>"; };
+		30F624C62071B6FC00926766 /* SKRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKRenderer.swift; sourceTree = "<group>"; };
+		30F624C82071B87700926766 /* SKTransformNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTransformNode.swift; sourceTree = "<group>"; };
+		30F624CA2071BF4500926766 /* SK3DNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SK3DNode.swift; sourceTree = "<group>"; };
+		30F624CC2071C03700926766 /* SKEffectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKEffectNode.swift; sourceTree = "<group>"; };
+		30F624CE2071CD9C00926766 /* SKEmitterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKEmitterNode.swift; sourceTree = "<group>"; };
+		30F624D02071E34100926766 /* SKKeyframeSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKKeyframeSequence.swift; sourceTree = "<group>"; };
+		30F624D620721A2F00926766 /* sample-particles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "sample-particles.sks"; sourceTree = "<group>"; };
+		30F624D9207227DD00926766 /* SKPhysicsWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsWorld.swift; sourceTree = "<group>"; };
+		30F624DB2072306600926766 /* SKPhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsBody.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3027A509204E9DE200BBF74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3027A503204E9DE200BBF74D = {
+			isa = PBXGroup;
+			children = (
+				3027A50E204E9DE200BBF74D /* SpriteKit Reference */,
+				3027A50D204E9DE200BBF74D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3027A50D204E9DE200BBF74D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3027A50C204E9DE200BBF74D /* SpriteKit Reference.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3027A50E204E9DE200BBF74D /* SpriteKit Reference */ = {
+			isa = PBXGroup;
+			children = (
+				3027A516204E9DE200BBF74D /* Assets.xcassets */,
+				3027A51B204E9DE200BBF74D /* Info.plist */,
+				3027A50F204E9DE200BBF74D /* AppDelegate.swift */,
+				3027A511204E9DE200BBF74D /* ViewController.swift */,
+				3027A513204E9DE200BBF74D /* Main.storyboard */,
+				3027A518204E9DE200BBF74D /* LaunchScreen.storyboard */,
+				3027A523204E9EF800BBF74D /* Scenes */,
+				3027A5A620528F7C00BBF74D /* Nodes */,
+				308DDC44206A749A00733146 /* Environment */,
+				30A64FEE206CF38F001BD6D3 /* Transformations */,
+				30F624D82072276A00926766 /* Physics */,
+				308DDC45206BA1F800733146 /* Constraints */,
+				3060A911205CF58F00376DD6 /* Textures */,
+				3060A918205DD21900376DD6 /* Tile Maps */,
+				30D33BF62057CE0A00AED9F9 /* Shaders */,
+				30F624C52071B6D100926766 /* Integrations */,
+			);
+			path = "SpriteKit Reference";
+			sourceTree = "<group>";
+		};
+		3027A523204E9EF800BBF74D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3027A5A4205006A600BBF74D /* SKView.swift */,
+				3027A524204E9F1300BBF74D /* SKScene.swift */,
+				3027A526204EAB1200BBF74D /* SKScene2.swift */,
+				308DDC42206A5B9100733146 /* SKTransition.swift */,
+				304194C42063A80F0024CB79 /* SKAction.swift */,
+				308DDC402067B72200733146 /* sample-action.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3027A5A620528F7C00BBF74D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				3027A5A720528FAC00BBF74D /* SKNode.swift */,
+				304FA3BF205651490070B46C /* SKSpriteNode.swift */,
+				30D33C0320594AF500AED9F9 /* SKShapeNode.swift */,
+				3060A903205CA4DB00376DD6 /* SKLabelNode.swift */,
+				3060A905205CACC000376DD6 /* SKVideoNode.swift */,
+				3060A90B205CE48800376DD6 /* SKCropNode.swift */,
+				3060A90D205CE7D000376DD6 /* SKReferenceNode.swift */,
+				3060A909205CE38300376DD6 /* sample-video.mp4 */,
+				3060A90F205CEA0400376DD6 /* sample-reference-node.sks */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		3060A911205CF58F00376DD6 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				3060A912205CF65900376DD6 /* SKTexture.swift */,
+				3060A914205D1CD600376DD6 /* SKMutableTexture.swift */,
+				3060A916205D213800376DD6 /* SKTextureAtlas.swift */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		3060A918205DD21900376DD6 /* Tile Maps */ = {
+			isa = PBXGroup;
+			children = (
+				3060A919205DD24600376DD6 /* SKTileMapNode.swift */,
+				3060A925205DEE6E00376DD6 /* SKTileSet.swift */,
+				3060A91F205DE6AE00376DD6 /* SKTileGroup.swift */,
+				3060A91D205DE36E00376DD6 /* SKTileGroupRule.swift */,
+				3060A91B205DD8A600376DD6 /* SKTileDefinition.swift */,
+				304194BE20610E970024CB79 /* sample-tile-set.sks */,
+			);
+			path = "Tile Maps";
+			sourceTree = "<group>";
+		};
+		308DDC44206A749A00733146 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				3088A9B4206D06F400879185 /* SKCameraNode.swift */,
+				3085FCA020569C9500813A53 /* SKLightNode.swift */,
+				3088A9B6206D0D5C00879185 /* SKAudioNode.swift */,
+				30F624CE2071CD9C00926766 /* SKEmitterNode.swift */,
+				30F624D02071E34100926766 /* SKKeyframeSequence.swift */,
+				30F624C32070E0D500926766 /* sample-audio.caf */,
+				30F624D620721A2F00926766 /* sample-particles.sks */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		308DDC45206BA1F800733146 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				308DDC46206BA21700733146 /* SKConstraint.swift */,
+				308DDC4A206BB63B00733146 /* SKReachConstraints.swift */,
+				308DDC48206BB3B200733146 /* SKRange.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		30A64FEE206CF38F001BD6D3 /* Transformations */ = {
+			isa = PBXGroup;
+			children = (
+				30A64FEF206CF3AF001BD6D3 /* SKWarpGeometry.swift */,
+				3088A9B2206CF6DC00879185 /* SKWarpGeometryGrid.swift */,
+				30F624C82071B87700926766 /* SKTransformNode.swift */,
+				30F624CC2071C03700926766 /* SKEffectNode.swift */,
+			);
+			path = Transformations;
+			sourceTree = "<group>";
+		};
+		30D33BF62057CE0A00AED9F9 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				30D33BF72057CE0A00AED9F9 /* SKShader.swift */,
+				30D33BF92057F64100AED9F9 /* SKUniform.swift */,
+				30D33BFB20591F5000AED9F9 /* SKAttribute.swift */,
+				30D33C0120592B6300AED9F9 /* SKAttributeValue.swift */,
+				30D33BFF205924BF00AED9F9 /* sample-opengl-shader.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		30F624C52071B6D100926766 /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				30F624CA2071BF4500926766 /* SK3DNode.swift */,
+				30F624C62071B6FC00926766 /* SKRenderer.swift */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		30F624D82072276A00926766 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				30F624D9207227DD00926766 /* SKPhysicsWorld.swift */,
+				30370492207504DD0009E935 /* SKFieldNode.swift */,
+				308DDA1F207635C500EBE1E6 /* SKRegion.swift */,
+				30F624DB2072306600926766 /* SKPhysicsBody.swift */,
+				303704902074E1790009E935 /* SKPhysicsContact.swift */,
+				308DDA2120765B3E00EBE1E6 /* SKPhysicsJoint.swift */,
+				308DDA2320765EF800EBE1E6 /* SKPhysicsJointFixed.swift */,
+				308DDA27207664F100EBE1E6 /* SKPhysicsJointPin.swift */,
+				308DDA292076686A00EBE1E6 /* SKPhysicsJointSliding.swift */,
+				308DDA25207662E300EBE1E6 /* SKPhysicsJointLimit.swift */,
+				308DDA2B20766A0000EBE1E6 /* SKPhysicsJointSpring.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3027A50B204E9DE200BBF74D /* SpriteKit Reference */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3027A51E204E9DE200BBF74D /* Build configuration list for PBXNativeTarget "SpriteKit Reference" */;
+			buildPhases = (
+				3027A508204E9DE200BBF74D /* Sources */,
+				3027A509204E9DE200BBF74D /* Frameworks */,
+				3027A50A204E9DE200BBF74D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpriteKit Reference";
+			productName = "SpriteKit Reference";
+			productReference = 3027A50C204E9DE200BBF74D /* SpriteKit Reference.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3027A504204E9DE200BBF74D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Roman Martinez";
+				TargetAttributes = {
+					3027A50B204E9DE200BBF74D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3027A507204E9DE200BBF74D /* Build configuration list for PBXProject "SpriteKit Reference" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3027A503204E9DE200BBF74D;
+			productRefGroup = 3027A50D204E9DE200BBF74D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3027A50B204E9DE200BBF74D /* SpriteKit Reference */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3027A50A204E9DE200BBF74D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3027A51A204E9DE200BBF74D /* LaunchScreen.storyboard in Resources */,
+				3060A90A205CE38300376DD6 /* sample-video.mp4 in Resources */,
+				3027A517204E9DE200BBF74D /* Assets.xcassets in Resources */,
+				30F624D720721A2F00926766 /* sample-particles.sks in Resources */,
+				3027A515204E9DE200BBF74D /* Main.storyboard in Resources */,
+				3060A910205CEA0500376DD6 /* sample-reference-node.sks in Resources */,
+				308DDC412067B72200733146 /* sample-action.sks in Resources */,
+				30D33C00205924BF00AED9F9 /* sample-opengl-shader.fsh in Resources */,
+				304194BF20610E970024CB79 /* sample-tile-set.sks in Resources */,
+				30F624C42070E0D500926766 /* sample-audio.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3027A508204E9DE200BBF74D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308DDA28207664F100EBE1E6 /* SKPhysicsJointPin.swift in Sources */,
+				30D33C0220592B6300AED9F9 /* SKAttributeValue.swift in Sources */,
+				3060A913205CF65900376DD6 /* SKTexture.swift in Sources */,
+				30D33C0420594AF500AED9F9 /* SKShapeNode.swift in Sources */,
+				304194C52063A80F0024CB79 /* SKAction.swift in Sources */,
+				3060A917205D213800376DD6 /* SKTextureAtlas.swift in Sources */,
+				3085FCA120569C9500813A53 /* SKLightNode.swift in Sources */,
+				30F624CB2071BF4500926766 /* SK3DNode.swift in Sources */,
+				3060A90C205CE48800376DD6 /* SKCropNode.swift in Sources */,
+				308DDC49206BB3B200733146 /* SKRange.swift in Sources */,
+				3060A91E205DE36E00376DD6 /* SKTileGroupRule.swift in Sources */,
+				3027A5A5205006A600BBF74D /* SKView.swift in Sources */,
+				308DDA2C20766A0000EBE1E6 /* SKPhysicsJointSpring.swift in Sources */,
+				30F624DC2072306600926766 /* SKPhysicsBody.swift in Sources */,
+				30D33BFC20591F5000AED9F9 /* SKAttribute.swift in Sources */,
+				3060A906205CACC000376DD6 /* SKVideoNode.swift in Sources */,
+				3027A512204E9DE200BBF74D /* ViewController.swift in Sources */,
+				30F624D12071E34100926766 /* SKKeyframeSequence.swift in Sources */,
+				3060A904205CA4DB00376DD6 /* SKLabelNode.swift in Sources */,
+				30D33BF82057CE0A00AED9F9 /* SKShader.swift in Sources */,
+				308DDA20207635C500EBE1E6 /* SKRegion.swift in Sources */,
+				3060A920205DE6AE00376DD6 /* SKTileGroup.swift in Sources */,
+				3027A5A820528FAC00BBF74D /* SKNode.swift in Sources */,
+				3027A525204E9F1300BBF74D /* SKScene.swift in Sources */,
+				30F624CF2071CD9C00926766 /* SKEmitterNode.swift in Sources */,
+				30D33BFA2057F64100AED9F9 /* SKUniform.swift in Sources */,
+				308DDA26207662E300EBE1E6 /* SKPhysicsJointLimit.swift in Sources */,
+				304FA3C0205651490070B46C /* SKSpriteNode.swift in Sources */,
+				308DDC4B206BB63B00733146 /* SKReachConstraints.swift in Sources */,
+				30F624DA207227DD00926766 /* SKPhysicsWorld.swift in Sources */,
+				3060A91C205DD8A600376DD6 /* SKTileDefinition.swift in Sources */,
+				3088A9B7206D0D5C00879185 /* SKAudioNode.swift in Sources */,
+				308DDA2420765EF800EBE1E6 /* SKPhysicsJointFixed.swift in Sources */,
+				30F624CD2071C03700926766 /* SKEffectNode.swift in Sources */,
+				3060A91A205DD24600376DD6 /* SKTileMapNode.swift in Sources */,
+				30F624C92071B87700926766 /* SKTransformNode.swift in Sources */,
+				3060A926205DEE6E00376DD6 /* SKTileSet.swift in Sources */,
+				3027A527204EAB1200BBF74D /* SKScene2.swift in Sources */,
+				3060A915205D1CD600376DD6 /* SKMutableTexture.swift in Sources */,
+				308DDC47206BA21700733146 /* SKConstraint.swift in Sources */,
+				30A64FF0206CF3AF001BD6D3 /* SKWarpGeometry.swift in Sources */,
+				30370493207504DD0009E935 /* SKFieldNode.swift in Sources */,
+				308DDA2A2076686A00EBE1E6 /* SKPhysicsJointSliding.swift in Sources */,
+				30F624C72071B6FC00926766 /* SKRenderer.swift in Sources */,
+				308DDC43206A5B9100733146 /* SKTransition.swift in Sources */,
+				308DDA2220765B3E00EBE1E6 /* SKPhysicsJoint.swift in Sources */,
+				3088A9B3206CF6DC00879185 /* SKWarpGeometryGrid.swift in Sources */,
+				3088A9B5206D06F400879185 /* SKCameraNode.swift in Sources */,
+				3060A90E205CE7D000376DD6 /* SKReferenceNode.swift in Sources */,
+				3027A510204E9DE200BBF74D /* AppDelegate.swift in Sources */,
+				303704912074E1790009E935 /* SKPhysicsContact.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3027A513204E9DE200BBF74D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3027A514204E9DE200BBF74D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3027A518204E9DE200BBF74D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3027A519204E9DE200BBF74D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3027A51C204E9DE200BBF74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3027A51D204E9DE200BBF74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3027A51F204E9DE200BBF74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8G9332Y2E;
+				INFOPLIST_FILE = "SpriteKit Reference/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romanmz.SpriteKit-Reference";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3027A520204E9DE200BBF74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8G9332Y2E;
+				INFOPLIST_FILE = "SpriteKit Reference/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romanmz.SpriteKit-Reference";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3027A507204E9DE200BBF74D /* Build configuration list for PBXProject "SpriteKit Reference" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3027A51C204E9DE200BBF74D /* Debug */,
+				3027A51D204E9DE200BBF74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3027A51E204E9DE200BBF74D /* Build configuration list for PBXNativeTarget "SpriteKit Reference" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3027A51F204E9DE200BBF74D /* Debug */,
+				3027A520204E9DE200BBF74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3027A504204E9DE200BBF74D /* Project object */;
+}
