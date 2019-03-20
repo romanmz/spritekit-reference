@@ -23,7 +23,7 @@ class MySKEffectNode: SKEffectNode {
 		
 		// Adding filter effects
 		// ------------------------------
-		let blurFilter = CIFilter(name: "CIBoxBlur", withInputParameters: ["inputRadius": 20])
+		let blurFilter = CIFilter(name: "CIBoxBlur", parameters: ["inputRadius": 20])
 		filter = blurFilter				// get/set the Core Image filter to apply to child nodes (you can only use filters that accept 1 input image and outputs 1 image)
 		shouldCenterFilter = true		// get/set whether or not to set the input center of the filter to be the same as the node's origin (only for filters that have input center)
 		shouldEnableEffects = true		// get/set whether or not to actually apply the filter. Defaults to true
